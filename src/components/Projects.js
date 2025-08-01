@@ -40,7 +40,6 @@ const projectsData = [
     image: '/images/cv.png',
     description: 'Desarrollo de mi propio Curriculum Vitae interactivo y dinámico, construido desde cero. Este proyecto demuestra mis habilidades en el desarrollo Front-end, diseño UI/UX, y optimización de rendimiento. Incluye navegación fluida, animaciones al scroll y un diseño moderno y responsivo.',
     technologies: ['HTML5', 'CSS3', 'JavaScript', 'React.js', 'Git'],
-    link: 'https://trombofiliaytrombosisargentina.netlify.app/',
   },
 ];
 

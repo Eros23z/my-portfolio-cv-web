@@ -15,15 +15,14 @@ const skillsData = {
     { name: 'PHP', icon: 'fab fa-php' },
     { name: 'Python', icon: 'fab fa-python' },
   ],
-  backendRuntime: [
-    { name: 'Node.js', icon: 'fab fa-node-js' },
-  ],
   frameworksLibraries: [
     { name: '.NET / ASP.NET', icon: 'devicon-dot-net-plain' },
     { name: 'EF Core', icon: 'fas fa-database' },
     { name: 'Sequelize', icon: 'fas fa-database' },
     { name: 'React', icon: 'fab fa-react' },
     { name: 'Bootstrap', icon: 'fab fa-bootstrap' },
+    { name: 'Node.js', icon: 'fab fa-node-js' },
+
   ],
   databases: [
     { name: 'MySQL', icon: 'fas fa-database' },
