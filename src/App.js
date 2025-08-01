@@ -1,24 +1,35 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
+import './App.css'; 
+import Header from './components/Header.js'; 
+import About from './components/About'; 
+import Education from './components/Education'; 
+import Experience from './components/Experience'; 
+import Projects from './components/Projects';
+import Skills from './components/Skills';
+import FloatingNavbar from './components/FloatingNavbar';
+import {ThemeProvider} from './context/ThemeContext';
+import './components/animations.css'; 
+import { library } from '@fortawesome/fontawesome-svg-core';
+import { fab } from '@fortawesome/free-brands-svg-icons';
+import { fas } from '@fortawesome/free-solid-svg-icons';
+
+library.add(fab, fas);
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <ThemeProvider> 
+      <div className="App">
+        <FloatingNavbar /> 
+        <Header /> 
+        <div className="App-content-wrapper">
+          <About id="about" />  
+          <Education id="education" /> 
+          <Experience id="experience" />  
+          <Projects id="projects" />  
+          <Skills id="skills" />  
+        </div>
+      </div>
+    </ThemeProvider>
   );
 }
 

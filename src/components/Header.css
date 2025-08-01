@@ -1,0 +1,118 @@
+.cv-header {
+  min-height: 80vh; 
+  display: flex;
+  flex-direction: column;
+  justify-content: center; 
+  align-items: center; 
+  background-color: var(--background-primary); 
+  color: var(--text-color-primary);
+   
+  text-align: center;
+  position: relative;
+  overflow: hidden; 
+}
+
+.header-content-wrapper {
+  z-index: 2; 
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  max-width: 1000px; 
+  padding: 20px;
+}
+
+.header-top-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.profile-pic {
+  width: 200px; 
+  height: 200px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 20px;
+  border: 5px solid var(--accent-color); 
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.5); 
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.profile-pic:hover {
+  transform: scale(1.05) rotate(2deg); 
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.7);
+}
+
+.job-title {
+  color: var(--accent-color);
+  font-size: 1.8em; 
+  font-weight: 300;
+  letter-spacing: 1px;
+}
+
+.main-name-section h1 {
+  font-size: 6em; 
+  margin: 0;
+  color: var(--text-color-light); 
+  text-shadow: 4px 4px 8px rgba(0, 0, 0, 0.7);
+  letter-spacing: 5px;
+  text-transform: uppercase;
+  font-weight: 900; 
+  line-height: 1; 
+  transition: color 0.3s ease;
+}
+
+.main-name-section h1:hover {
+  color: var(--accent-color); 
+}
+
+.contact-icons-large {
+  display: flex;
+  flex-wrap: wrap; 
+  justify-content: center;
+  margin-top: 40px; 
+  gap: 25px; 
+}
+
+.contact-icons-large span,
+.contact-icons-large a {
+  color: var(--text-color-secondary);
+  font-size: 3em;
+  text-decoration: none;
+  transition: color 0.3s ease, transform 0.2s ease;
+  padding: 10px;
+}
+
+.contact-icons-large a:hover {
+  color: var(--accent-color); 
+  transform: translateY(-5px) scale(1.1);
+}
+
+@media (max-width: 768px) {
+  .cv-header {
+    min-height: 60vh; 
+  }
+  .profile-pic {
+    width: 150px;
+    height: 150px;
+  }
+  .job-title {
+    font-size: 1.4em;
+  }
+  .main-name-section h1 {
+    font-size: 3.5em; 
+    letter-spacing: 3px;
+  }
+  .contact-info-large {
+    flex-direction: column;
+    font-size: 1.1em;
+    gap: 15px;
+  }
+  .contact-icons-large {
+    font-size: 2em; 
+    gap: 25px;
+  }
+}
