@@ -1,6 +1,6 @@
 import { useEffect, useRef, useState } from 'react';
 
-const useScrollAnimation = (threshold = 0.0) => {
+const useScrollAnimation = (threshold = 0.2) => {
   const [isVisible, setIsVisible] = useState(false);
   const domRef = useRef();
 
@@ -19,6 +19,7 @@ const useScrollAnimation = (threshold = 0.0) => {
         },
         {
           threshold: threshold,
+          rootMargin: '550px 0px 200px 0px'
         }
       );
 

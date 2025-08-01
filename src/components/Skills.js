@@ -12,16 +12,16 @@ const skillsData = {
     { name: 'X++', icon: 'fas fa-code' }, 
     { name: 'TypeScript', icon: 'devicon-typescript-plain' },
     { name: 'Java', icon: 'fab fa-java' },
-    { name: 'Node.js', icon: 'fab fa-node-js' },
     { name: 'PHP', icon: 'fab fa-php' },
     { name: 'Python', icon: 'fab fa-python' },
   ],
-  frameworks: [
+  backendRuntime: [
+    { name: 'Node.js', icon: 'fab fa-node-js' },
+  ],
+  frameworksLibraries: [
     { name: '.NET / ASP.NET', icon: 'devicon-dot-net-plain' },
     { name: 'EF Core', icon: 'fas fa-database' },
     { name: 'Sequelize', icon: 'fas fa-database' },
-    { name: 'REST APIs', icon: 'fas fa-exchange-alt' },
-    { name: 'Dynamics 365', icon: 'fas fa-cloud' },
     { name: 'React', icon: 'fab fa-react' },
     { name: 'Bootstrap', icon: 'fab fa-bootstrap' },
   ],
@@ -31,10 +31,24 @@ const skillsData = {
     { name: 'MongoDB', icon: 'fas fa-leaf' },
     { name: 'SQL Server', icon: 'fas fa-database' },
   ],
+  platformsERP: [
+    { name: 'Microsoft Dynamics 365', icon: 'fas fa-cloud' },
+  ],
+  conceptsArchitecture: [
+    { name: 'API RESTful', icon: 'fas fa-exchange-alt' },
+  ],
+  toolsVersionControl: [
+    { name: 'Git', icon: 'fab fa-git-alt' },
+    { name: 'GitHub', icon: 'fab fa-github' },
+  ],
   methodologies: [
     { name: 'Agile', icon: 'fas fa-users' },
     { name: 'Scrum', icon: 'fas fa-running' },
     { name: 'Kanban', icon: 'fas fa-columns' },
+  ],
+  languagesSpoken: [
+    { name: 'Spanish (Native)', icon: 'fas fa-language' },
+    { name: 'English (B2)', icon: 'fas fa-language' },
   ],
 };
 
