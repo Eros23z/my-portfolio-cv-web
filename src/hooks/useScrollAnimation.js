@@ -1,6 +1,6 @@
 import { useEffect, useRef, useState } from 'react';
 
-const useScrollAnimation = (threshold = 0.2) => {
+const useScrollAnimation = (threshold = 0.0) => {
   const [isVisible, setIsVisible] = useState(false);
   const domRef = useRef();
 
