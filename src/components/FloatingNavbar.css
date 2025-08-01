@@ -80,6 +80,7 @@
 @media (max-width: 900px) {
   .floating-navbar {
     left: 10px;
+    display: none;
   }
   .floating-navbar button {
     font-size: 1.5em;

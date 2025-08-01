@@ -6,7 +6,9 @@ import Education from './components/Education';
 import Experience from './components/Experience'; 
 import Projects from './components/Projects';
 import Skills from './components/Skills';
+import Footer from './components/Footer';
 import FloatingNavbar from './components/FloatingNavbar';
+import MobileNav from './components/MobileNav';
 import {ThemeProvider} from './context/ThemeContext';
 import './components/animations.css'; 
 import { library } from '@fortawesome/fontawesome-svg-core';
@@ -20,6 +22,7 @@ function App() {
     <ThemeProvider> 
       <div className="App">
         <FloatingNavbar /> 
+        <MobileNav />
         <Header /> 
         <div className="App-content-wrapper">
           <About id="about" />  
@@ -28,6 +31,7 @@ function App() {
           <Projects id="projects" />  
           <Skills id="skills" />  
         </div>
+        <Footer />
       </div>
     </ThemeProvider>
   );
