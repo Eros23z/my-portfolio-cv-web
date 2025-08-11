@@ -10,23 +10,23 @@ function About() {
   };
   return (
     <section id='about' ref={domRef} className={`about-section ${isVisible ? 'scroll-animate is-visible' : 'scroll-animate'}`}>
-      <h2>Sobre Mí</h2>
+      <h2>ABOUT ME</h2>
       <p>
-        Soy un desarrollador de software con solida formacion tecnica y experiencia en la creacion de aplicaciones
-        y soluciones tecnologicas. Me apasiona aprender nuevas tecnologias y aportar en un entorno colaborativo,
-        buscando siempre mejorar mis habilidades y entregar soluciones eficientes
+        I am a software developer with solid technical training and experience in creating applications
+        and technological solutions. I am passionate about learning new technologies and contributing in a collaborative environment,
+        always seeking to improve my skills and deliver efficient solutions.
       </p>
       {showMore && (
         <div extra-details>
           <p>
-            Tengo experiencia en el desarrollo de aplicaciones web, así como en la implementación de soluciones
-            personalizadas para clientes. Me destaco por mi capacidad para resolver problemas complejos y mi atención al detalle.
+            I have experience in web application development, as well as in implementing customized solutions
+            customized solutions for clients. I stand out for my ability to solve complex problems and my attention to detail.
           </p>
           <p>
-            Me considero una persona proactiva, con habilidades de comunicación efectiva y un fuerte compromiso con la calidad del trabajo.
-            Estoy siempre dispuesto a aprender y adaptarme a nuevas tecnologías y metodologías de trabajo.
+            I consider myself a proactive person with effective communication skills and a strong commitment to quality work.
+            I am always willing to learn and adapt to new technologies and work methodologies.
           </p>
-          <p><span>¡Listo para enfrentar nuevos desafíos y contribuir en proyectos innovadores!</span></p>
+          <p><span>Ready to take on new challenges and contribute to innovative projects!</span></p>
         </div>
       )}
       <button onClick={toggleShowMore} className="toggle-button">

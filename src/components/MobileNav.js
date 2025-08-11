@@ -43,7 +43,7 @@ function MobileNav() {
 
   return (
     <div className="mobile-nav">
-      <button className="hamburger-menu" onClick={toggleMenu} aria-label="Abrir menú de navegación">
+      <button className="hamburger-menu" onClick={toggleMenu} aria-label="Open navigation menu">
         <i className={isOpen ? 'fas fa-times' : 'fas fa-bars'}></i>
       </button>
 
@@ -60,7 +60,7 @@ function MobileNav() {
               ))}
               <li>
                 <button onClick={toggleTheme}>
-                  {theme === 'dark' ? 'Modo Claro' : 'Modo Oscuro'}
+                  {theme === 'dark' ? 'Light mode' : 'Dark mode'}
                   {theme === 'dark' ? <i className="fas fa-sun"></i> : <i className="fas fa-moon"></i>}
                 </button>
               </li>

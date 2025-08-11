@@ -45,8 +45,8 @@ function FloatingNavbar() {
         <li>
           <button
             onClick={toggleTheme}
-            aria-label={`Cambiar a ${theme === 'dark' ? 'modo claro' : 'modo oscuro'}`}
-            title={`Cambiar a ${theme === 'dark' ? 'Modo Claro' : 'Modo Oscuro'}`}
+            aria-label={`Change to ${theme === 'dark' ? 'Light mode' : 'Dark mode'}`}
+            title={`Change to ${theme === 'dark' ? 'Light mode' : 'Dark mode'}`}
           >
             {theme === 'dark' ? (
               <i className="fas fa-sun"></i> 
@@ -54,7 +54,7 @@ function FloatingNavbar() {
               <i className="fas fa-moon"></i> 
             )}
             <span className="navbar-label">
-              {theme === 'dark' ? 'Modo Claro' : 'Modo Oscuro'}
+              {theme === 'dark' ? 'Light mode' : 'Dark mode'}
             </span>
           </button>
         </li>

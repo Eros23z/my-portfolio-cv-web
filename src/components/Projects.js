@@ -4,41 +4,41 @@ import useScrollAnimation from '../hooks/useScrollAnimation';
 
 const projectsData = [
   {
-    title: 'Organizador de eventos',
+    title: 'Event organizer',
     image: '/images/agenda.png', 
-    description: 'Desarrollo personal universitario de un organizador de eventos con ABM de contactos, clientes y eventos.',
+    description: 'University personal development for an event organizer with ABM for contacts, clients, and events.',
     technologies: ['C#'],
   },
   {
-    title: 'Página web',
+    title: 'Website',
     image: '/images/ulp.png',
-    description: 'Desarrollo personal universitario de una página web estática con HTML, CSS y JavaScript.',
+    description: 'Personal university development of a static website using HTML, CSS, and JavaScript.',
     technologies: ['HTML5', 'CSS3', 'JavaScript'],
   },
   {
     title: 'Axxon Consulting',
     image: '/images/axxon.png',
-    description: 'Proyecto evolutivo en el que se solicitaba facturar por anticipado. Se requería disponibilizar todos los gastos cargados a proyecto en Dynamics para poder ser facturados desde los verticales de facturación.',
+    description: 'An evolving project that required advance invoicing. All expenses charged to the project in Dynamics had to be made available so that they could be invoiced from the invoicing verticals.',
     technologies: ['X++', 'SQL Server', 'Dynamics 365', 'Git'],
   },
   {
-    title: 'Gestor de estudiantes',
+    title: 'Student manager',
     image: '/images/studentsmanager.png',
-    description: 'Aplicación de escritorio CRUD completa para gestión de estudiantes. Implementa arquitectura por capas, validaciones, acceso a datos con EF Core y patrones de buenas prácticas.',
+    description: 'Complete CRUD desktop application for student management. Implements layered architecture, validations, data access with EF Core, and best practice patterns.',
     technologies: ['C#', '.NET', 'EF Core', 'SQL Server', 'Git'],
     link: 'https://github.com/Eros23z/Student-Management-.Net',
   },
   {
     title: 'Trombosis y trombofilia Argentina',
     image: '/images/ong.png',
-    description: 'Desarrollo y optimizacion de un modulo de contacto interactivo, incorporando validacion de formulario (HTML5) y proteccion anti-spam con Google reCAPTCHA v2. Se integro Formsubmit.co como servicio backendless para la gestion eficiente del envio de correos, superando desafios en la configuracion de redirecciones y exclusion de datos sensibles del email.',
+    description: 'Development and optimization of an interactive contact module, incorporating form validation (HTML5) and anti-spam protection with Google reCAPTCHA v2. Formsubmit.co was integrated as a backendless service for efficient email management, overcoming challenges in configuring redirects and excluding sensitive data from emails.',
     technologies: ['HTML5', 'CSS3', 'JavaScript', 'Bootstrap', 'Git'],
     link: 'https://trombofiliaytrombosisargentina.netlify.app/',
   },
   {
     title: 'Curriculum Vitae Web',
     image: '/images/cv.png',
-    description: 'Desarrollo de mi propio Curriculum Vitae interactivo y dinámico, construido desde cero. Este proyecto demuestra mis habilidades en el desarrollo Front-end, diseño UI/UX, y optimización de rendimiento. Incluye navegación fluida, animaciones al scroll y un diseño moderno y responsivo.',
+    description: 'Development of my own interactive and dynamic resume, built from scratch. This project showcases my skills in front-end development, UI/UX design, and performance optimization. It features smooth navigation, scroll animations, and a modern, responsive design.',
     technologies: ['HTML5', 'CSS3', 'JavaScript', 'React.js', 'Git'],
   },
 ];
@@ -47,7 +47,7 @@ function Projects() {
   const [domRef, isVisible] = useScrollAnimation(0.2);
   return (
     <section id='projects' ref={domRef} className={`projects-section fade-in-slide-up ${isVisible ? 'scroll-animate is-visible' : 'scroll-animate'}`}>
-      <h2 className="projects-title">Proyectos Destacados</h2>
+      <h2 className="projects-title">Featured Projects</h2>
       <div className="projects-grid">
         {projectsData.map((project, index) => (
           <div className="project-card" key={index}> 
@@ -65,7 +65,7 @@ function Projects() {
               
               {project.link && ( 
                 <a href={project.link} target="_blank" rel="noopener noreferrer" className="project-view-button">
-                  Ver Proyecto <i className="fas fa-external-link-alt"></i> 
+                  See Project <i className="fas fa-external-link-alt"></i> 
                 </a>
               )}
             </div>

@@ -8,10 +8,10 @@ function Footer() {
   return (
     <footer className="app-footer">
       <p className="footer-copyright">
-        © {currentYear} Eros Daniel Zamora. Todos los derechos reservados.
+        © {currentYear} Eros Daniel Zamora. All rights reserved.
       </p>
       <p className="footer-message">
-        Diseñado y desarrollado con pasión. 
+        Designed and developed with passion.
       </p>
     </footer>
   );

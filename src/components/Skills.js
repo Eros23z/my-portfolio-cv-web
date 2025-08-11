@@ -55,7 +55,7 @@ function Skills() {
   const [domRef, isVisible] = useScrollAnimation(0.2); 
   return (
     <section id='skills' ref={domRef} className={`skills-section fade-in-slide-up ${isVisible ? 'scroll-animate is-visible' : 'scroll-animate'}`}>
-      <h2 className="skills-title">Habilidades</h2>
+      <h2 className="skills-title">Skills</h2>
       <div className="skills-grid">
         {Object.entries(skillsData).map(([category, skills]) => (
           <div key={category} className="skill-category">

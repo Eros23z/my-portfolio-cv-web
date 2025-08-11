@@ -12,7 +12,7 @@ function Header() {
       <div className="header-content-wrapper">
         <div className="header-top-info">
           <img src="/images/eros.jpg" alt="Tu Foto de Perfil" className="profile-pic" />
-          <p className="job-title">Desarrollador de Software</p>
+          <p className="job-title">Software Developer</p>
         </div>
         <div className="main-name-section">
           <h1>Eros Daniel Zamora</h1>
