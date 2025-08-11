@@ -1,12 +1,12 @@
 .app-footer {
-  background-color: var(--background-secondary); /* Usa el color de fondo de tus tarjetas o principal */
-  color: var(--text-color-secondary); /* Un color de texto más suave */
+  background-color: var(--background-secondary); 
+  color: var(--text-color-secondary); 
   padding: 30px 20px;
   text-align: center;
   font-size: 0.9em;
-  border-top: 1px solid var(--border-color); /* Una línea sutil para separarlo */
-  margin-top: 40px; /* Espacio por encima del footer */
-  transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease; /* Para el modo oscuro/claro */
+  border-top: 1px solid var(--border-color); 
+  margin-top: 40px; 
+  transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease; 
 }
 
 .footer-copyright {
@@ -19,7 +19,6 @@
   font-style: italic;
 }
 
-/* Responsividad para el footer si es necesario, aunque suele ser simple */
 @media (max-width: 768px) {
   .app-footer {
     padding: 20px 15px;

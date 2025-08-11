@@ -54,18 +54,16 @@ function MobileNav() {
               {sections.map((section) => (
                 <li key={section.id}>
                   <button onClick={() => scrollToSection(section.id)}>
-                    {section.label} {/* Texto fijo */}
+                    {section.label} 
                   </button>
                 </li>
               ))}
-              {/* Botones de tema en el menú móvil (texto fijo) */}
               <li>
                 <button onClick={toggleTheme}>
                   {theme === 'dark' ? 'Modo Claro' : 'Modo Oscuro'}
                   {theme === 'dark' ? <i className="fas fa-sun"></i> : <i className="fas fa-moon"></i>}
                 </button>
               </li>
-              {/* Eliminamos el botón de idioma de aquí */}
             </ul>
           </nav>
         </div>
