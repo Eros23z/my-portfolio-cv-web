@@ -173,7 +173,7 @@
     margin-right: 0;
     flex-direction: column; 
     text-align: center;
-    padding: 20px;
+    padding: 0px;
     min-height: auto;
   }
 
@@ -182,8 +182,8 @@
   }
 
   .education-background {
-    position: static; 
-    margin-top: 20px; 
+    position: absolute; 
+    margin-top: 0px; 
     flex-direction: column;
   }
   .education-logo, .background-text {
@@ -193,7 +193,7 @@
   }
   .background-text {
       font-size: 4em; 
-      opacity: 0.1; 
+      opacity: 0.4; 
   }
   .education-logo {
       max-width: 100px;
