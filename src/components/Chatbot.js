@@ -41,7 +41,7 @@ function Chatbot() {
 
     // Agregar el mensaje del usuario a la conversación
     const userMessage = { text: input, sender: 'user' };
-    setMessages(prevMessages => [...prevMessages, userMessage]);
+    setMessages(prevMessages => [...prevMessages, userMessage]); 
 
     // Lógica del motor de diálogo con el Map
     // Convertimos el input a minúsculas y lo limpiamos
@@ -84,7 +84,7 @@ function Chatbot() {
         <div className="chatbot-messages">
           {messages.length === 0 && (
             <div className="chatbot-message bot-message initial-message">
-              <span>¡Hola! Soy el chatbot de Eros. ¿Tienes alguna pregunta sobre mi CV?</span>
+              <span>¡Hola! Soy el chatbot de Eros. ¿Tienes alguna pregunta sobre mi CV? Puedes preguntar sobre: "Experiencia", "Proyectos", "Habilidades", "Contacto", "Tecnologías" o "Futuro", etc.</span>
             </div>
           )}
           {messages.map((msg, index) => (
