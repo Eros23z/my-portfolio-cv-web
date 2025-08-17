@@ -84,7 +84,8 @@ function Chatbot() {
         <div className="chatbot-messages">
           {messages.length === 0 && (
             <div className="chatbot-message bot-message initial-message">
-              <span>¡Hola! Soy el chatbot de Eros. ¿Tienes alguna pregunta sobre mi CV? Puedes preguntar sobre: "Experiencia", "Proyectos", "Habilidades", "Contacto", "Tecnologías" o "Futuro", etc.</span>
+              <span>¡Hola! Soy el chatbot de Eros. ¿Tienes alguna pregunta sobre mi CV?</span>
+              <p>Puedes preguntar sobre:  <br />"Experiencia" <br />"Proyectos" <br />"Habilidades" <br />"Contacto" <br />"Tecnologías" <br />"Futuro" <br />etc.</p>
             </div>
           )}
           {messages.map((msg, index) => (
