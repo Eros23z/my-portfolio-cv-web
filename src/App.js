@@ -9,6 +9,7 @@ import Skills from './components/Skills';
 import Footer from './components/Footer';
 import FloatingNavbar from './components/FloatingNavbar';
 import MobileNav from './components/MobileNav';
+import Chatbot from './components/Chatbot.js';
 import {ThemeProvider} from './context/ThemeContext';
 import './components/animations.css'; 
 import { library } from '@fortawesome/fontawesome-svg-core';
@@ -23,6 +24,7 @@ function App() {
       <div className="App">
         <FloatingNavbar /> 
         <MobileNav />
+        <Chatbot />
         <Header /> 
         <div className="App-content-wrapper">
           <About id="about" />  
