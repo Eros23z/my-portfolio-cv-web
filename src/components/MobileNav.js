@@ -1,11 +1,9 @@
 import React, { useState } from 'react';
 import './MobileNav.css';
-// import { useLanguage } from '../context/LanguageContext'; // ELIMINA ESTA LÍNEA
 import { useTheme } from '../context/ThemeContext';
 
 function MobileNav() {
   const [isOpen, setIsOpen] = useState(false);
-  // const { text, lang, toggleLanguage } = useLanguage(); // ELIMINA ESTA LÍNEA
   const { theme, toggleTheme } = useTheme();
 
   const toggleMenu = () => {
@@ -31,14 +29,13 @@ function MobileNav() {
     }
   };
 
-  // Las secciones ahora son texto fijo en español
   const sections = [
-    { id: 'app-top', label: 'Inicio' },
-    { id: 'about', label: 'Sobre Mí' },
-    { id: 'skills', label: 'Habilidades' },
-    { id: 'education', label: 'Educación' },
-    { id: 'experience', label: 'Experiencia' },
-    { id: 'projects', label: 'Proyectos' },
+    { id: 'app-top', label: 'Profile' },
+    { id: 'about', label: 'About Me' },
+    { id: 'skills', label: 'Skills' },
+    { id: 'education', label: 'Education' },
+    { id: 'experience', label: 'Experience' },
+    { id: 'projects', label: 'Projects' },
   ];
 
   return (

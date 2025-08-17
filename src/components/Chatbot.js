@@ -2,20 +2,19 @@ import React, { useState, useEffect, useRef } from 'react';
 import './Chatbot.css'; // Crearemos este archivo de CSS en el siguiente paso
 
 function Chatbot() {
-  // 1. Hook useState para el estado de la ventana del chatbot
+  // 1. estado de la ventana del chatbot
   const [isOpen, setIsOpen] = useState(false);
   
-  // 2. Hook useState para el estado de la conversación (lista de mensajes)
+  // 2. estado de la conversación (lista de mensajes)
   const [messages, setMessages] = useState([]);
   
-  // 3. Hook useState para el valor del input del usuario
+  // 3. valor del input del usuario
   const [input, setInput] = useState('');
   
-  // 4. useRef para hacer scroll automático al final del chat
+  // 4. scroll automático al final del chat
   const messagesEndRef = useRef(null);
 
-  // El motor de diálogo: un objeto con palabras clave y respuestas.
-  // Es la forma más simple de "entrenar" a tu bot.
+  // El motor de diálogo
   const chatbotResponses = {
     'experiencia': "Tengo 2 años de experiencia como desarrollador de software, con un enfoque en React y C# .NET.",
     'proyectos': "He trabajado en proyectos destacados como el desarrollo de una página web para una ONG, desarrollo de mi cv web, CRUD con .NET, etc. Puedes verlos en la sección 'Proyectos' de mi CV.",
@@ -57,13 +56,11 @@ function Chatbot() {
       }
     }
     
-    // Agregar el mensaje del bot después de un pequeño retraso
+    // Agregar el mensaje del bot 
     setTimeout(() => {
       const botMessage = { text: botResponse, sender: 'bot' };
       setMessages(prevMessages => [...prevMessages, botMessage]);
-    }, 750); // Retraso de 0.75 segundos para simular que está "pensando"
-
-    // Limpiar el input
+    }, 750);
     setInput('');
   };
 
