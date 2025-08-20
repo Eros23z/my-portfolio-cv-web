@@ -3,26 +3,21 @@ import './Skills.css';
 import useScrollAnimation from '../hooks/useScrollAnimation'; 
 
 const skillsData = {
-  languages: [
+  frontend: [
     { name: 'HTML5', icon: 'fab fa-html5' },
     { name: 'CSS3', icon: 'fab fa-css3-alt' },
+    { name: 'React', icon: 'fab fa-react' },
     { name: 'JavaScript', icon: 'fab fa-js' },
-    { name: 'C#', icon: 'devicon-csharp-plain' }, 
-    { name: 'C++', icon: 'devicon-cplusplus-plain' },
-    { name: 'X++', icon: 'fas fa-code' }, 
     { name: 'TypeScript', icon: 'devicon-typescript-plain' },
-    { name: 'Java', icon: 'fab fa-java' },
-    { name: 'PHP', icon: 'fab fa-php' },
-    { name: 'Python', icon: 'fab fa-python' },
+    { name: 'Bootstrap', icon: 'fab fa-bootstrap' },
   ],
-  frameworksLibraries: [
+  backend: [
     { name: '.NET / ASP.NET', icon: 'devicon-dot-net-plain' },
+    { name: 'Node.js', icon: 'fab fa-node-js' },
     { name: 'EF Core', icon: 'fas fa-database' },
     { name: 'Sequelize', icon: 'fas fa-database' },
-    { name: 'React', icon: 'fab fa-react' },
-    { name: 'Bootstrap', icon: 'fab fa-bootstrap' },
-    { name: 'Node.js', icon: 'fab fa-node-js' },
-
+    { name: 'C#', icon: 'devicon-csharp-plain' }, 
+    { name: 'Express.js', icon: 'devicon-express-original' },
   ],
   databases: [
     { name: 'MySQL', icon: 'fas fa-database' },
@@ -30,8 +25,15 @@ const skillsData = {
     { name: 'MongoDB', icon: 'fas fa-leaf' },
     { name: 'SQL Server', icon: 'fas fa-database' },
   ],
-  platformsERP: [
-    { name: 'Microsoft Dynamics 365', icon: 'fas fa-cloud' },
+  goodPractices: [
+    { name: 'Clean Architecture', icon: 'fas fa-laptop-code' },
+    { name: 'SOLID Principles', icon: 'fas fa-shield-alt' },
+    { name: 'Dependency Injection', icon: 'fas fa-plug' },
+
+  ],
+  Extras: [
+    { name: 'ERP Microsoft Dynamics 365 F&O', icon: 'fas fa-cloud' },
+    { name: 'X++', icon: 'fas fa-code' }, 
   ],
   conceptsArchitecture: [
     { name: 'API RESTful', icon: 'fas fa-exchange-alt' },

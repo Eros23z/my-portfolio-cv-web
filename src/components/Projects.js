@@ -18,14 +18,14 @@ const projectsData = [
   {
     title: 'Axxon Consulting',
     image: '/images/axxon.png',
-    description: 'An evolving project that required advance invoicing. All expenses charged to the project in Dynamics had to be made available so that they could be invoiced from the invoicing verticals.',
+    description: 'Solution Developer on Dynamics 365 FO (ERP). X++ for functionality development (forms, tables, entities). I worked with SQL Server for queries and reports. My impact: I contributed to the customization of financial/operational modules, ensuring that billing and customer data loading processes were more efficient.',
     technologies: ['X++', 'SQL Server', 'Dynamics 365', 'Git'],
   },
   {
     title: 'Student manager',
     image: '/images/studentsmanager.png',
-    description: 'Complete CRUD desktop application for student management. Implements layered architecture, validations, data access with EF Core, and best practice patterns.',
-    technologies: ['C#', '.NET', 'EF Core', 'SQL Server', 'Git'],
+    description: 'Development in .NET Core + EF Core + SQL Server, under Clean Architecture. Application of SOLID principles and dependency injection. Implementation of complete CRUD for students. (Pending) Unit testing with xUnit.',
+    technologies: ['C#', '.NET', 'EF Core', 'SQL Server', 'Git', 'Clean architecture', 'SOLID principles', 'dependency injection'],
     link: 'https://github.com/Eros23z/Student-Management-.Net',
   },
   {

@@ -10,7 +10,7 @@ const experienceData = [
     position: 'Software Developer',
     duration: 'Jul 2023 - Feb 2025',
     responsibilities: [
-      'I was a member of the development and customization team within the Dynamics 365 ecosystem, specializing in X++. I implemented specific functionalities to optimize clients operational processes. I worked in multidisciplinary teams using agile methodologies (Scrum/Kanban). Proficient in PowerShell and Queries in Postman.',
+      'I was involved in developing customizations in Dynamics 365 Finance and Operations using X++. I implemented custom entities, forms, tables, and fields for billing and project management processes. Creation and optimization of queries in SQL Server for internal reports. I collaborated with multidisciplinary teams to improve operational flows for clients in different industries. My impact: reduction of errors in advance billing and optimization of expense recording in projects.',
     ],
   }
 ];
