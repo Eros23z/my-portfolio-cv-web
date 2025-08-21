@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import './About.css'; 
+import './LanguageAnimationChange.css';
 import useScrollAnimation from '../hooks/useScrollAnimation';
 import { useLanguage } from '../context/LanguageContext';
 
@@ -9,11 +10,12 @@ function About() {
   const toggleShowMore = () => {
     setShowMore(!showMore);
   };
-  const { text } = useLanguage();
+  const { text, isAnimating } = useLanguage();
 
   return (
     <section id='about' ref={domRef} className={`about-section ${isVisible ? 'scroll-animate is-visible' : 'scroll-animate'}`}>
-      <h2>{text.about.title}</h2>
+      <div className={isAnimating ? 'fade-out' : 'fade-in'}>
+        <h2>{text.about.title}</h2>
       <p>
         {text.about.paragraph1}
       </p>
@@ -48,6 +50,7 @@ function About() {
       >
         <i className="fas fa-file-pdf"></i> Download CV 
       </a>
+      </div>
     </section>
   );
 }

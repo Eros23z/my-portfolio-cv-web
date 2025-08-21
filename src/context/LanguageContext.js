@@ -9,16 +9,22 @@ const LanguageContext = createContext();
 export function LanguageProvider({ children }) {
   const [lang, setLang] = useState('es'); // Estado para el idioma actual ('es' o 'en')
   const [text, setText] = useState(es); // Estado para el objeto de texto actual
+  const [isAnimating, setIsAnimating] = useState(false);
 
   const toggleLanguage = () => {
-    setLang(currentLang => {
+    setIsAnimating(true);
+    setTimeout(() => {
+      setLang(currentLang => {
       const newLang = currentLang === 'es' ? 'en' : 'es';
       setText(newLang === 'es' ? es : en);
       return newLang;
     });
+    setIsAnimating(false); // 3. Desactiva la animación al finalizar
+    }, 300);
+    
   };
 
-  const value = { lang, text, toggleLanguage };
+  const value = { lang, text, toggleLanguage, isAnimating };
 
   return (
     <LanguageContext.Provider value={value}>

@@ -1,5 +1,6 @@
 import React from 'react';
 import './Header.css';
+import './LanguageAnimationChange.css';
 import { useLanguage } from '../context/LanguageContext';
 
 
@@ -8,11 +9,12 @@ function Header() {
   const emailAddress = 'energycs23@live.com';
   const linkedinUrl = 'https://www.linkedin.com/in/eros-zamora/';
   const githubUrl = 'https://github.com/Eros23z';
-  const { text } = useLanguage();
+  const { text, isAnimating } = useLanguage();
 
   return (
     <header className="cv-header fade-in-slide-up">
-      <div className="header-content-wrapper">
+      <div className={isAnimating ? 'fade-out' : 'fade-in'}>
+        <div className="header-content-wrapper">
         <div className="header-top-info">
           <img src="/images/eros.jpg" alt="Tu Foto de Perfil" className="profile-pic" />
           <p className="job-title">{text.header.jobTitle}</p>
@@ -33,6 +35,7 @@ function Header() {
           <a href={githubUrl} target="_blank" rel="noopener noreferrer" aria-label="GitHub">
             <i className="fab fa-github"></i> 
           </a>
+        </div>
         </div>
       </div>
     </header>

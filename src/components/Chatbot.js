@@ -38,44 +38,50 @@ function Chatbot() {
     // Buscamos palabras clave en el input del usuario
     const keywordMap = {
       'es': {
-        'experiencia': ['experiencia', 'trabajo'],
-        'proyectos': ['proyectos', 'portfolio', 'desarrollos'],
-        'habilidades': ['habilidades', 'skills', 'conocimientos'],
-        'salario': 'salario',
-        'contacto': 'contacto',
-        'tecnologías': 'tecnologias',
-        'github': 'github',
-        'por qué': 'por que',
-        'futuro': ['futuro', 'que aspiras?', 'que deseas lograr?', '¿que aspiras?'],
-        'hola': ['hola', 'hello', 'que tal', 'qué tal', 'buenos días', 'buenas tardes'],
-        'adiós': ['adiós', 'bye', 'chao'],
-        'gracias': ['gracias', 'muchas gracias'],
+        'experience': ['experiencia', 'trabajo'],
+        'projects': ['proyectos', 'portfolio', 'desarrollos'],
+        'skills': ['habilidades', 'skills', 'conocimientos'],
+        'salary': ['salario', 'sueldo', 'remuneracion'],
+        'contact': ['contacto', 'contactame'],
+        'technologies': ['tecnologias', 'tecnologia', 'stack'],
+        'github': ['github', 'git', 'repositorio'],
+        'why': ['por que', 'porque', 'razon'],
+        'future': ['futuro', 'carrera', 'posicion'],
+        'hi': ['hola', 'hello', 'que tal', 'que tal', 'buenos dias', 'buenas tardes'],
+        'bye': ['adios', 'bye', 'chao'],
+        'thanks': ['gracias', 'muchas gracias', 'gracias'],
       },
       'en': {
         'experience': ['experience', 'job', 'work'],
         'projects': ['projects', 'portfolio', 'developments'],
         'skills': ['skills', 'abilities'],
-        'salary': 'salary',
-        'contact': 'contact',
-        'technologies': 'technologies',
-        'github': 'github',
-        'why': 'why',
-        'future': 'future',
-        'hi': ['hi', 'hello', 'what\'s up', 'good morning', 'good afternoon'],
+        'salary': ['salary', 'pay', 'compensation'],
+        'contact': ['contact', 'reach out'],
+        'technologies': ['technologies', 'technology', 'stack'],
+        'github': ['github', 'git', 'repository'],
+        'why': ['why', 'reason'],
+        'future': ['future', 'career', 'position'],
+        'hi': ['hi', 'hello', 'whats up', 'good morning', 'good afternoon'],
         'bye': ['bye', 'goodbye', 'see you later'],
         'thanks': ['thanks', 'thank you'],
       }
     };
-    const currentKeywords = keywordMap[lang];
-    for (const keyword in currentKeywords) {
-      if (processedInput.includes(keyword)) {
-        const responseKey = currentKeywords[keyword];
-        botResponse = chatbotResponses[responseKey];
-        break;
+    let foundMatch = false; 
+
+    for (const responseKey in keywordMap[lang]) {
+      for (const synonym of keywordMap[lang][responseKey]) {
+        if (processedInput.includes(synonym)) {
+          botResponse = chatbotResponses[responseKey];
+          foundMatch = true; 
+          break; 
+        }
+      }
+      if (foundMatch) {
+        break; 
       }
     }
     
-    // Agregar el mensaje del bot 
+    // Agregar el mensaje del bot
     setTimeout(() => {
       const botMessage = { text: botResponse, sender: 'bot' };
       setMessages(prevMessages => [...prevMessages, botMessage]);
@@ -125,6 +131,7 @@ function Chatbot() {
       </div>
     </div>
   );
-}
+};
+
 
 export default Chatbot;
