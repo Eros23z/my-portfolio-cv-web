@@ -1,0 +1,145 @@
+{
+  "header": {
+    "jobTitle": "Desarrollador de Software",
+    "name": "Eros Daniel Zamora"
+  },
+  "about": {
+    "title": "Sobre Mí",
+    "paragraph1": "Soy desarrollador de software con una sólida formación técnica y experiencia en la creación de aplicaciones y soluciones tecnológicas. Me apasiona aprender nuevas tecnologías y contribuir en un entorno colaborativo, siempre buscando mejorar mis habilidades y ofrecer soluciones eficientes.",
+    "paragraph2": "Tengo experiencia en el desarrollo de aplicaciones web, así como en la implementación de soluciones personalizadas soluciones personalizadas para clientes. Destaco por mi capacidad para resolver problemas complejos y mi atención al detalle.",
+    "paragraph3": "Me considero una persona proactiva con habilidades de comunicación eficaces y un fuerte compromiso con el trabajo de calidad. Siempre estoy dispuesto a aprender y adaptarme a nuevas tecnologías y metodologías de trabajo.",
+    "paragraph4": "¡Listo para asumir nuevos retos y contribuir a proyectos innovadores!",
+    "showMore": "Mostrar Más",
+    "showLess": "Mostrar Menos"
+  },
+  "skills": {
+    "title": "Habilidades",
+    "goodPractices": "Buenas Prácticas",
+    "databases": "Bases de Datos",
+    "toolsVersionControl": "Herramientas y Control de Versiones",
+    "methodologies": "Metodologías",
+    "conceptsArchitecture": "Conceptos y Arquitecturas",
+    "platformsERP": "Plataformas / ERP",
+    "languagesSpoken": "Idiomas",
+    "downloadTitle": "Descargar mi Curriculum Vitae"
+  },
+  "education": {
+    "title": "Educación",
+    "institutions": [
+      {
+        "institution": "Instituto Educativo Cristo Rey",
+        "backgroundText": "Colegio",
+        "alignment": "left",
+        "logo": "Cristo Rey Instituto Emblem.png",
+        "details": [
+        "Humanidades y Ciencias Sociales",
+        "Año de graduación: 2016"
+        ]
+      },
+      {
+        "institution": "Universidad de La Punta, San Luis",
+        "backgroundText": "Universidad",
+        "alignment": "right",
+        "logo": "ulp.png",
+        "details": [
+          "Tecnicatura Universitaria en Desarrollo de Software",
+          "Año de inicio: 2018",
+          "Estado: En curso"
+        ]
+      }
+    ]
+  },
+  "experience": {
+    "title": "Experiencia",
+    "jobs": [
+      {
+        "company": "Axxon Consulting",
+        "position": "Desarrollador de Software",
+        "duration": "Jul 2023 - Feb 2025",
+        "logo": "/images/axxon.png",
+        "responsibilities": "Solution Developer sobre Dynamics 365 FO (ERP). X++ para desarrollo de funcionalidades (formularios, tablas, entidades). Trabajé con SQL Server para consultas y reportes. Implementé consultas con insert recordset y diferentes tipos de join en X++ para extraer datos de transacciones de ventas y jerarquía organizacionales. Reducción de errores en la facturación anticipada y optimización del registro de gastos en proyectos. Resolución de problemas de performance como SQLExecution Timeout optimizando filtros, condiciones de joins y paginación de reportes. Contribuí a la personalización de módulos financieros/operativos, asegurando que los procesos de facturación y carga de datos de clientes fueran más eficientes."
+      }
+    ]
+  },
+  "projects": {
+    "title": "Proyectos Destacados",
+    "allProjects": [
+        {
+          "title": "Organizador de Eventos",
+          "description": "Desarrollo personal universitario para un organizador de eventos con ABM para contactos, clientes y eventos.",
+          "image": "/images/agenda.png",
+          "technologies": ["C#"]
+        },
+        {
+          "title": "Static Website",
+          "description": "Desarrollo personal universitario de un sitio web estático utilizando HTML, CSS y JavaScript.",
+          "image": "/images/ulp.png",
+          "technologies": ["HTML5", "CSS3", "JavaScript"]
+        },
+
+        {
+          "title": "Axxon Consulting",
+          "description": "Participé en el desarrollo de personalizaciones en Dynamics 365 Finance and Operations utilizando X++. Implementé entidades, formularios, tablas y campos personalizados para los procesos de facturación y gestión de proyectos. Creación y optimización de consultas en SQL Server para informes internos. Colaboré con equipos multidisciplinares para mejorar los flujos operativos de clientes de diferentes sectores.",
+          "image": "/images/axxon.png",
+          "technologies": ["X++", "SQL Server", "Dynamics 365", "Git"]
+        },
+        {
+          "title": "Student manager",
+          "description": "Desarrollo en .NET Core + EF Core + SQL Server, bajo arquitectura limpia. Aplicación de los principios SOLID y la inyección de dependencias. Implementación completa de CRUD para estudiantes. (Pendiente) Pruebas unitarias con xUnit.",
+          "image": "/images/studentsmanager.png",
+          "link": "https://github.com/Eros23z/Student-Management-.Net",
+          "technologies": ["C#", ".NET", "EF Core", "SQL Server", "Git", "Clean architecture", "SOLID principles", "dependency injection"]
+        },
+        {
+          "title": "Trombosis y trombofilia Argentina",
+          "description": "Desarrollo y optimización de un módulo de contacto interactivo, que incorpora validación de formularios (HTML5) y protección antispam con Google reCAPTCHA v2. Formsubmit.co se integró como un servicio sin backend para una gestión eficiente del correo electrónico, superando los retos que planteaban la configuración de redireccionamientos y la exclusión de datos confidenciales de los correos electrónicos.",
+          "image": "/images/ong.png",
+          "technologies": ["HTML5", "CSS3", "JavaScript", "Bootstrap", "Git"],
+          "link": "https://trombofiliaytrombosisargentina.netlify.app/"
+        },
+        {
+          "title": "Curriculum Vitae Web",
+          "description": "Desarrollo de mi propio currículum interactivo y dinámico, creado desde cero. Este proyecto muestra mis habilidades en desarrollo front-end, diseño UI/UX y optimización del rendimiento. Cuenta con una navegación fluida, animaciones de desplazamiento y un diseño moderno y adaptable.",
+          "image": "/images/cv.png",
+          "technologies": ["HTML5", "CSS3", "JavaScript", "React.js", "Git"]
+        }
+    ],
+    "viewProject": "Ver Proyecto"
+  },
+  "navbar": {
+    "home": "Inicio",
+    "about": "Sobre Mí",
+    "skills": "Habilidades",
+    "education": "Educación",
+    "experience": "Experiencia",
+    "projects": "Proyectos",
+    "toggleThemeLight": "Modo Claro",
+    "toggleThemeDark": "Modo Oscuro",
+    "toggleLangEnglish": "Inglés",
+    "toggleLangSpanish": "Español"
+  },
+  "chatbot": {
+    "title": "Asistente Virtual",
+    "presentation": "¡Hola! Soy el chatbot de Eros. ¿Tienes alguna pregunta sobre mi CV?",
+    "help": "Puedes preguntar sobre: 'Experiencia', 'Proyectos', 'Habilidades', 'Contacto', 'Tecnologías', 'Futuro', etc.",
+    "write": "Por favor, escribe tu pregunta...",
+
+    "experience": "Tengo 2 años de experiencia como desarrollador de software, con un enfoque en React y C# .NET.",
+    "projects": "He trabajado en proyectos destacados como el desarrollo de una página web para una ONG, desarrollo de mi cv web, CRUD con .NET, etc. Puedes verlos en la sección 'Proyectos' de mi CV.",
+    "skills": "Mis habilidades principales son React.js, C#/.NET, y SQL Server. También tengo conocimiento de Node.js, Express, y metodologías ágiles.",
+    "salary": "Prefiero discutir el tema salarial durante la entrevista para entender mejor las responsabilidades del puesto.",
+    "contact": "Puedes contactarme a través de LinkedIn, GitHub o por email. Encontrarás los enlaces en la parte superior de la página.",
+    "technologies": "Mi stack tecnológico principal incluye React.js, C#/.NET, SQL Server, Node.js y Express. También he trabajado con TypeScript y bases de datos como MongoDB y MySQL.",
+    "github": "Puedes ver mi código y proyectos en mi perfil de GitHub. El enlace está en la parte superior de la página.",
+    "why": "Me apasiona resolver problemas y crear productos de software. Soy una persona proactiva y orientada a los resultados.",
+    "future": "Busco un puesto que me permita crecer profesionalmente y continuar aprendiendo de un equipo de expertos. Mi objetivo es aplicar mis habilidades para crear soluciones de software innovadoras y escalables, contribuyendo de manera significativa al éxito de la empresa.",
+    "hi": "¡Hola! Bienvenido a mi CV interactivo. ¿Tienes alguna pregunta sobre mi experiencia, proyectos o habilidades?",
+    "bye": "¡Adiós! Gracias por tu interés. Espero hablar contigo pronto.",
+    "thanks": "De nada. ¿Hay algo más en lo que pueda ayudarte?",
+    "default": "Lo siento, no entendí tu pregunta. Puedes intentar preguntar sobre 'experiencia', 'proyectos', 'habilidades', 'contacto' o 'tecnologias'."
+  },
+  "footer": {
+    "allRightsReserved": "Eros Daniel Zamora. Todos los derechos reservados.",
+    "builtWithLove": "Diseñado y desarrollado con pasión."
+  }
+}

@@ -1,17 +1,17 @@
 import React from 'react';
 import './Footer.css';
-
+import { useLanguage } from '../context/LanguageContext';
 
 function Footer() {
   const currentYear = new Date().getFullYear();
-
+  const { text } = useLanguage();
   return (
     <footer className="app-footer">
       <p className="footer-copyright">
-        © {currentYear} Eros Daniel Zamora. All rights reserved.
+        © {currentYear} {text.footer.allRightsReserved}
       </p>
       <p className="footer-message">
-        Designed and developed with passion.
+        {text.footer.builtWithLove}
       </p>
     </footer>
   );

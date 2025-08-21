@@ -109,6 +109,32 @@
   font-weight: bold;
 }
 
+.download-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 20px;
+  padding: 12px 24px;
+  background-color: var(--accent-color);
+  color: #fff;
+  text-decoration: none;
+  border-radius: 50px;
+  font-size: 1rem;
+  font-weight: bold;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.download-button:hover {
+  background-color: var(--accent-color-dark);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+}
+
+.download-button i {
+  font-size: 1.2rem;
+}
+
 /* Responsividad básica */
 @media (max-width: 768px) {
   .skills-grid {

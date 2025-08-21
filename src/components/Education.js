@@ -1,36 +1,24 @@
 import React from 'react';
 import './Education.css';
 import useScrollAnimation from '../hooks/useScrollAnimation';
+import { useLanguage } from '../context/LanguageContext';
 
-const educationData = [
+const educData = [
   {
-    institution: 'Instituto Educativo Cristo Rey',
-    logo: '/images/Cristo Rey Instituto Emblem.png', 
-    backgroundText: 'SCHOOL', 
-    details: [
-      'Social Sciences and Humanities',
-      'Year of Graduation: 2016',
-    ],
-    alignment: 'left' 
+    logo: 'images/Cristo Rey Instituto Emblem.png',
   },
   {
-    institution: 'Universidad de La Punta San Luis',
-    logo: '/images/ulp.png', 
-    backgroundText: 'UNIVERSITY', 
-    details: [
-      'Career: Software Development Technician',
-      'Year Started: 2018',
-      'Status: Studying',
-    ],
-    alignment: 'right' 
+    logo: 'images/ulp.png',
   }
-];
+]
 
 function Education() {
+  const { text } = useLanguage();
+  const educationData = text.education.institutions;
   const [domRef, isVisible] = useScrollAnimation(0.2);
   return (
     <section id='education' ref={domRef} className={`education-section fade-in-slide-up ${isVisible ? 'scroll-animate is-visible' : 'scroll-animate'}`}>
-      <h2 className="education-title">Education</h2>
+      <h2 className="education-title">{text.education.title}</h2>
       <div className="education-container">
         {educationData.map((edu, index) => (
           <div key={index} className={`education-item education-item-${edu.alignment}`}>
@@ -43,7 +31,7 @@ function Education() {
               </ul>
             </div>
             <div className="education-background">
-              <img src={edu.logo} alt={`${edu.institution} logo`} className="education-logo" />
+              <img src={educData[index].logo} alt={`${edu.institution} logo`} className="education-logo" />
               <span className="background-text">{edu.backgroundText}</span>
             </div>
           </div>

@@ -1,21 +1,24 @@
 import React from 'react';
 import './Header.css';
+import { useLanguage } from '../context/LanguageContext';
+
 
 function Header() {
   const whatsappNumber = '5492664486818'; 
   const emailAddress = 'energycs23@live.com';
   const linkedinUrl = 'https://www.linkedin.com/in/eros-zamora/';
   const githubUrl = 'https://github.com/Eros23z';
+  const { text } = useLanguage();
 
   return (
     <header className="cv-header fade-in-slide-up">
       <div className="header-content-wrapper">
         <div className="header-top-info">
           <img src="/images/eros.jpg" alt="Tu Foto de Perfil" className="profile-pic" />
-          <p className="job-title">Software Developer</p>
+          <p className="job-title">{text.header.jobTitle}</p>
         </div>
         <div className="main-name-section">
-          <h1>Eros Daniel Zamora</h1>
+          <h1>{text.header.name}</h1>
         </div>
         <div className="contact-icons-large"> 
           <a href={`https://wa.me/${whatsappNumber}`} target="_blank" rel="noopener noreferrer" aria-label="WhatsApp">

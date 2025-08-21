@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import './About.css'; 
 import useScrollAnimation from '../hooks/useScrollAnimation';
+import { useLanguage } from '../context/LanguageContext';
 
 function About() {
   const [domRef, isVisible] = useScrollAnimation(0.2);
@@ -8,30 +9,45 @@ function About() {
   const toggleShowMore = () => {
     setShowMore(!showMore);
   };
+  const { text } = useLanguage();
+
   return (
     <section id='about' ref={domRef} className={`about-section ${isVisible ? 'scroll-animate is-visible' : 'scroll-animate'}`}>
-      <h2>ABOUT ME</h2>
+      <h2>{text.about.title}</h2>
       <p>
-        I am a software developer with solid technical training and experience in creating applications
-        and technological solutions. I am passionate about learning new technologies and contributing in a collaborative environment,
-        always seeking to improve my skills and deliver efficient solutions.
+        {text.about.paragraph1}
       </p>
       {showMore && (
         <div extra-details>
           <p>
-            I have experience in web application development, as well as in implementing customized solutions
-            customized solutions for clients. I stand out for my ability to solve complex problems and my attention to detail.
-          </p>
+            {text.about.paragraph2}
           <p>
-            I consider myself a proactive person with effective communication skills and a strong commitment to quality work.
-            I am always willing to learn and adapt to new technologies and work methodologies.
+            {text.about.paragraph3}
           </p>
-          <p><span>Ready to take on new challenges and contribute to innovative projects!</span></p>
+          </p>
+          <p><span>{text.about.paragraph4}</span></p>
         </div>
       )}
       <button onClick={toggleShowMore} className="toggle-button">
-        {showMore ? 'Mostrar Menos' : 'Mostrar Más'}
+        {showMore ? text.about.showLess : text.about.showMore}
       </button>
+      <p/>
+      <a
+        href="/CV-Eros.pdf"
+        download
+        className="download-button"
+      >
+        <i className="fas fa-file-pdf"></i> Descargar CV
+      </a>
+      &nbsp;
+      &nbsp;
+      <a
+        href="/Your-CV-in-english.pdf"
+        download
+        className="download-button"
+      >
+        <i className="fas fa-file-pdf"></i> Download CV 
+      </a>
     </section>
   );
 }

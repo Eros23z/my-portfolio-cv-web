@@ -1,25 +1,15 @@
 import React from 'react';
 import './Experience.css';
 import useScrollAnimation from '../hooks/useScrollAnimation';
-
-const experienceData = [
-  {
-    company: 'Axxon Consulting',
-    logo: '/images/axxon.png', 
-    backgroundText: '', 
-    position: 'Software Developer',
-    duration: 'Jul 2023 - Feb 2025',
-    responsibilities: [
-      'I was involved in developing customizations in Dynamics 365 Finance and Operations using X++. I implemented custom entities, forms, tables, and fields for billing and project management processes. Creation and optimization of queries in SQL Server for internal reports. I collaborated with multidisciplinary teams to improve operational flows for clients in different industries. My impact: reduction of errors in advance billing and optimization of expense recording in projects.',
-    ],
-  }
-];
+import { useLanguage } from '../context/LanguageContext';
 
 function Experience() {
+  const { text } = useLanguage();
   const [domRef, isVisible] = useScrollAnimation(0.2);
+  const experienceData = text.experience.jobs;
   return (
     <section id='experience' ref={domRef} className={`experience-section fade-in-slide-up ${isVisible ? 'scroll-animate is-visible' : 'scroll-animate'}`}>
-      <h2 className="experience-title">Experience</h2>
+      <h2 className="experience-title">{text.experience.title}</h2>
       <div className="experience-container">
         {experienceData.map((exp, index) => (
           <div key={index} className="experience-item">
@@ -32,9 +22,7 @@ function Experience() {
               <h4>{exp.company}</h4>
               <p className="duration">{exp.duration}</p>
               <ul>
-                {exp.responsibilities.map((res, i) => (
-                  <li key={i}>{res}</li>
-                ))}
+                  <li>{exp.responsibilities}</li>
               </ul>
             </div>
           </div>

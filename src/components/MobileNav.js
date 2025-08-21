@@ -1,10 +1,13 @@
 import React, { useState } from 'react';
 import './MobileNav.css';
 import { useTheme } from '../context/ThemeContext';
+import { useLanguage } from '../context/LanguageContext';
 
 function MobileNav() {
   const [isOpen, setIsOpen] = useState(false);
   const { theme, toggleTheme } = useTheme();
+  const { text } = useLanguage();
+  const { lang, toggleLanguage } = useLanguage();
 
   const toggleMenu = () => {
     setIsOpen(!isOpen);
@@ -30,12 +33,12 @@ function MobileNav() {
   };
 
   const sections = [
-    { id: 'app-top', label: 'Profile' },
-    { id: 'about', label: 'About Me' },
-    { id: 'skills', label: 'Skills' },
-    { id: 'education', label: 'Education' },
-    { id: 'experience', label: 'Experience' },
-    { id: 'projects', label: 'Projects' },
+    { id: 'app-top', label: text.navbar.home },
+    { id: 'about', label: text.navbar.about },
+    { id: 'skills', label: text.navbar.skills },
+    { id: 'education', label: text.navbar.education },
+    { id: 'experience', label: text.navbar.experience },
+    { id: 'projects', label: text.navbar.projects },
   ];
 
   return (
@@ -59,6 +62,11 @@ function MobileNav() {
                 <button onClick={toggleTheme}>
                   {theme === 'dark' ? 'Light mode' : 'Dark mode'}
                   {theme === 'dark' ? <i className="fas fa-sun"></i> : <i className="fas fa-moon"></i>}
+                </button>
+                <br />
+                <button onClick={toggleLanguage}>
+                  {lang === 'en' ? 'Spanish' : 'English'}
+                  {lang === 'en' ? <i className="fas fa-globe"></i> : <i className="fas fa-globe"></i>}
                 </button>
               </li>
             </ul>

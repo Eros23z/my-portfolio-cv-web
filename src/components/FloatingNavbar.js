@@ -1,17 +1,20 @@
 import React from 'react';
 import './FloatingNavbar.css';
 import { useTheme } from '../context/ThemeContext';
+import { useLanguage } from '../context/LanguageContext';
 
 function FloatingNavbar() {
   const { theme, toggleTheme } = useTheme();
+  const { text } = useLanguage();
+  const { lang, toggleLanguage } = useLanguage();
 
   const sections = [
-    { id: 'app-top', icon: 'fas fa-home', label: 'Header' },
-    { id: 'about', icon: 'fas fa-user', label: 'About me' },
-    { id: 'education', icon: 'fas fa-graduation-cap', label: 'Education' },
-    { id: 'experience', icon: 'fas fa-briefcase', label: 'Experience' },
-    { id: 'projects', icon: 'fas fa-project-diagram', label: 'Projects' },
-    { id: 'skills', icon: 'fas fa-code', label: 'Skills' },
+    { id: 'app-top', icon: 'fas fa-home', label: text.navbar.home },
+    { id: 'about', icon: 'fas fa-user', label: text.navbar.about },
+    { id: 'education', icon: 'fas fa-graduation-cap', label: text.navbar.education },
+    { id: 'experience', icon: 'fas fa-briefcase', label: text.navbar.experience },
+    { id: 'projects', icon: 'fas fa-project-diagram', label: text.navbar.projects },
+    { id: 'skills', icon: 'fas fa-code', label: text.navbar.skills },
     // { id: 'contact', icon: 'fas fa-envelope', label: 'Contacto' },
   ];
 
@@ -55,6 +58,21 @@ function FloatingNavbar() {
             )}
             <span className="navbar-label">
               {theme === 'dark' ? 'Light mode' : 'Dark mode'}
+            </span>
+          </button>
+          <br/>
+          <button
+            onClick={toggleLanguage}
+            aria-label={`Change to ${lang === 'en' ? 'Spanish' : 'English'}`}
+            title={`Change to ${lang === 'en' ? 'Spanish' : 'English'}`}
+          >
+            {lang === 'en' ? (
+              <i className="fas fa-globe"></i>
+            ) : (
+              <i className="fas fa-globe"></i>
+            )}
+            <span className="navbar-label">
+              {lang === 'en' ? 'Spanish' : 'English'}
             </span>
           </button>
         </li>

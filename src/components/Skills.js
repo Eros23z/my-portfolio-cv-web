@@ -1,6 +1,7 @@
 import React from 'react';
 import './Skills.css';
 import useScrollAnimation from '../hooks/useScrollAnimation'; 
+import { useLanguage } from '../context/LanguageContext';
 
 const skillsData = {
   frontend: [
@@ -54,14 +55,15 @@ const skillsData = {
 };
 
 function Skills() {
+  const { text } = useLanguage();
   const [domRef, isVisible] = useScrollAnimation(0.2); 
   return (
     <section id='skills' ref={domRef} className={`skills-section fade-in-slide-up ${isVisible ? 'scroll-animate is-visible' : 'scroll-animate'}`}>
-      <h2 className="skills-title">Skills</h2>
+      <h2 className="skills-title">{text.skills.title}</h2>
       <div className="skills-grid">
         {Object.entries(skillsData).map(([category, skills]) => (
           <div key={category} className="skill-category">
-            <h3 className="category-title">{category.replace(/([A-Z])/g, ' $1').replace(/^./, str => str.toUpperCase())}</h3> 
+            <h3 className="category-title">{text.skills[category]}</h3> 
             <div className="skill-items">
               {skills.map((skill) => (
                 <div key={skill.name} className="skill-item">
@@ -73,6 +75,21 @@ function Skills() {
           </div>
         ))}
       </div>
+      <div className="skills-section">
+        <h2 className='skills-title'>{text.skills.downloadTitle}</h2>
+        <div className='skill-category'>
+          <a href="/CV-Eros.pdf" download className="download-button">
+          <i className="fas fa-file-pdf"></i> Descargar CV
+          </a>
+          &nbsp;
+          {/*PASAR EL CV DE ESPAÑOl A INGLÉS PARA AGREGAR EL ARCHIVO*/}
+          <a href="/Your-CV-in-english.pdf" download className="download-button">
+            <i className="fas fa-file-pdf"></i> Download CV (English)
+          </a>
+        </div>
+        
+      </div>
+      
     </section>
   );
 }
