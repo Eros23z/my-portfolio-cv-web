@@ -4,7 +4,7 @@
     "name": "Eros Daniel Zamora"
   },
   "about": {
-    "title": "SOBRE MÍ",
+    "title": "ABOUT ME",
     "paragraph1": "I am a software developer with a solid technical background and experience in creating applications and technological solutions. I am passionate about learning new technologies and contributing in a collaborative environment, always seeking to improve my skills and offer efficient solutions.",
     "paragraph2": "I have experience in web application development, as well as in implementing customized solutions for clients. I stand out for my ability to solve complex problems and my attention to detail.",
     "paragraph3": "I consider myself a proactive person with effective communication skills and a strong commitment to quality work. I am always willing to learn and adapt to new technologies and work methodologies.",
@@ -112,7 +112,7 @@
     "about": "About Me",
     "skills": "Skills",
     "education": "Education",
-    "experience": "Experiencie",
+    "experience": "Experience",
     "projects": "Projects",
     "toggleThemeLight": "Light Mode",
     "toggleThemeDark": "Dark Mode",
