@@ -8,6 +8,13 @@ const messages = [
     "Colaborador entusiasta y solucionador de problemas creativo.",
     "Listo para aportar valor inmediato a tu equipo.",
 ];
+const messagesEN = [
+    "Full-Stack Developer passionate about creating innovative solutions.",
+    "Proven experience in React, .NET, and robust databases.",
+    "Focus on clean, efficient, and high-performance code.",
+    "Enthusiastic collaborator and creative problem solver.",
+    "Ready to bring immediate value to your team."
+]
 
 function LoadingScreen({ onLoadingComplete }) {
     const [currentMessage, setCurrentMessage] = useState('');
@@ -18,16 +25,16 @@ function LoadingScreen({ onLoadingComplete }) {
         const randomIndex = Math.floor(Math.random() * messages.length);
         setCurrentMessage(messages[randomIndex]);
 
-        // 1. Oculta el mensaje después de 2 segundos (ajusta si es necesario)
+        // 1. Oculta el mensaje después de 2 segundos 
         const messageTimer = setTimeout(() => {
             setIsMessageVisible(false);
-        }, 2000);
+        }, 2500);
 
         // 2. Oculta la pantalla completa después de 3 segundos (0.5s de animación + 0.5s de buffer)
         const screenTimer = setTimeout(() => {
             setIsLoadingScreenVisible(false);
             onLoadingComplete();
-        }, 3000);
+        }, 3500);
 
         return () => {
             clearTimeout(messageTimer);
