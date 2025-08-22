@@ -87,8 +87,7 @@ function Skills() {
             <a href="/Your-CV-in-english.pdf" download className="download-button">
               <i className="fas fa-file-pdf"></i> Download CV (English)
             </a>
-         </div>
-        
+          </div>
         </div>
       </div>
     </section>

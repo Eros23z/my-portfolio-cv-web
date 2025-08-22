@@ -14,12 +14,15 @@
   },
   "skills": {
     "title": "Habilidades",
+    "frontend": "Frontend",
+    "backend": "Backend",
     "goodPractices": "Buenas Prácticas",
     "databases": "Bases de Datos",
     "toolsVersionControl": "Herramientas y Control de Versiones",
     "methodologies": "Metodologías",
     "conceptsArchitecture": "Conceptos y Arquitecturas",
     "platformsERP": "Plataformas / ERP",
+    "Extras": "Extras",
     "languagesSpoken": "Idiomas",
     "downloadTitle": "Descargar mi Curriculum Vitae"
   },

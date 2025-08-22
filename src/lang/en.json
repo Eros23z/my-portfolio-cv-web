@@ -15,9 +15,12 @@
   "skills": {
     "title": "Skills",
     "goodPractices": "Good Practices",
+    "frontend": "Frontend",
+    "backend": "Backend",
+    "Extras": "Extras",
     "databases": "Databases",
     "toolsVersionControl": "Tools Version Control",
-    "methodologies": "Metodologhies",
+    "methodologies": "Methodologies",
     "conceptsArchitecture": "Concepts Architecture",
     "platformsERP": "Plataforms / ERP",
     "languagesSpoken": "Languages",

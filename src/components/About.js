@@ -21,12 +21,8 @@ function About() {
       </p>
       {showMore && (
         <div extra-details>
-          <p>
-            {text.about.paragraph2}
-          <p>
-            {text.about.paragraph3}
-          </p>
-          </p>
+          <p>{text.about.paragraph2} </p>
+          <p>{text.about.paragraph3}</p>
           <p><span>{text.about.paragraph4}</span></p>
         </div>
       )}

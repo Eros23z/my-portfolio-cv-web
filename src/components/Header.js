@@ -16,7 +16,7 @@ function Header() {
       <div className={isAnimating ? 'fade-out' : 'fade-in'}>
         <div className="header-content-wrapper">
         <div className="header-top-info">
-          <img src="/images/eros.jpg" alt="Tu Foto de Perfil" className="profile-pic" />
+          <img src="/images/eros.jpg" alt="Foto de Perfil" className="profile-pic" />
           <p className="job-title">{text.header.jobTitle}</p>
         </div>
         <div className="main-name-section">
