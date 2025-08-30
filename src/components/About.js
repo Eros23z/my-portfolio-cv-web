@@ -40,7 +40,7 @@ function About() {
       &nbsp;
       &nbsp;
       <a
-        href="/Your-CV-in-english.pdf"
+        href="/CV_Eros_English.pdf"
         download
         className="download-button"
       >
