@@ -59,7 +59,7 @@
         "duration": "Jul 2023 - Feb 2025",
         "logo": "/images/axxon.png",
         "responsibilities": [
-          "Solution Developer on Dynamics 365 FO (ERP). X++ for functionality development (forms, tables, entities). I worked with SQL Server for queries and reports. I implemented queries with insert recordset and different types of joins in X++ to extract data from sales transactions and organizational hierarchies. Reduction of errors in advance billing and optimization of expense recording in projects. Resolved performance issues such as SQLExecution Timeout by optimizing filters, join conditions, and report pagination. Contributed to the customization of financial/operational modules, ensuring that billing and customer data loading processes were more efficient.",
+          "Solution Developer on Dynamics 365 FO (ERP). X++ for functionality development (forms, tables, entities). I worked with SQL Server for queries and reports. I implemented queries with insert recordset and different types of joins in X++ to extract data from sales transactions and organizational hierarchies. Reduction of errors in advance billing and optimization of expense recording in projects. Resolved performance issues such as SQLExecution Timeout by optimizing filters, join conditions, and report pagination. Contributed to the customization of financial/operational modules, ensuring that billing and customer data loading processes were more efficient."
         ]
       }
     ]

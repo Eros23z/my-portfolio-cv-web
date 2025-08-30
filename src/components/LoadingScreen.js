@@ -2,19 +2,27 @@ import React, { useState, useEffect } from 'react';
 import './LoadingScreen.css';
 
 const messages = [
-    "Desarrollador Full-Stack apasionado por crear soluciones innovadoras.",
-    "Experiencia probada en React, .NET y bases de datos robustas.",
-    "Enfoque en código limpio, eficiente y de alto rendimiento.",
-    "Colaborador entusiasta y solucionador de problemas creativo.",
-    "Listo para aportar valor inmediato a tu equipo.",
+    {
+        es: "Desarrollador Full-Stack apasionado por crear soluciones innovadoras.",
+        en: "Passionate Full-Stack Developer creating innovative solutions."
+    },
+    {
+        es: "Experiencia probada en React, .NET y bases de datos robustas.",
+        en: "Proven experience in React, .NET, and robust databases."
+    },
+    {
+        es: "Enfoque en código limpio, eficiente y de alto rendimiento.",
+        en: "Focused on clean, efficient, and high-performance code."
+    },
+    {
+        es: "Colaborador entusiasta y solucionador de problemas creativo.",
+        en: "An enthusiastic collaborator and creative problem-solver."
+    },
+    {
+        es: "Listo para aportar valor inmediato a tu equipo.",
+        en: "Ready to add immediate value to your team."
+    }
 ];
-const messagesEN = [
-    "Full-Stack Developer passionate about creating innovative solutions.",
-    "Proven experience in React, .NET, and robust databases.",
-    "Focus on clean, efficient, and high-performance code.",
-    "Enthusiastic collaborator and creative problem solver.",
-    "Ready to bring immediate value to your team."
-]
 
 function LoadingScreen({ onLoadingComplete }) {
     const [currentMessage, setCurrentMessage] = useState('');
@@ -30,7 +38,7 @@ function LoadingScreen({ onLoadingComplete }) {
             setIsMessageVisible(false);
         }, 2500);
 
-        // 2. Oculta la pantalla completa después de 3 segundos (0.5s de animación + 0.5s de buffer)
+        // 2. Oculta la pantalla completa después de 3 segundos
         const screenTimer = setTimeout(() => {
             setIsLoadingScreenVisible(false);
             onLoadingComplete();
@@ -44,13 +52,14 @@ function LoadingScreen({ onLoadingComplete }) {
 
     return isLoadingScreenVisible ? (
         <div className="loading-screen">
-            <div className='my-name'>
-                <h1 className={`loading-message ${isMessageVisible ? 'fade-in' : 'fade-out'}`}>Eros Daniel Zamora</h1>
-            </div>
-            <h2 className={`loading-message ${isMessageVisible ? 'fade-in' : 'fade-out'}`}>Software Developer</h2>
-            <p className={`loading-message ${isMessageVisible ? 'fade-in' : 'fade-out'}`}>
-                {currentMessage}
-            </p>
+            <h1 className="my-name">Eros Daniel Zamora</h1>
+            <p className="job-title-loading">Software Developer</p> 
+            {currentMessage && (
+                <div className={`loading-messages-container ${isMessageVisible ? 'fade-in' : 'fade-out'}`}>
+                    <p className="loading-message-es">{currentMessage.es}</p>
+                    <p className="loading-message-en">{currentMessage.en}</p>
+                </div>
+            )}
             <div className="loading-dots">
                 <span className="dot"></span>
                 <span className="dot"></span>

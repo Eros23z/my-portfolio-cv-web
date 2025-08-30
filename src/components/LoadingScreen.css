@@ -14,11 +14,14 @@
     transition: opacity 0.5s ease-out; 
 }
 
-.my-name h1{
+.my-name {
     font-size: 5rem;
-    font-weight: bold;
-    color: #f0f0f0;
-    animation: fadeIn 1s ease-in-out forwards;
+    font-weight: 900;
+    font-style: italic; 
+    color: transparent; /* Hace que el texto sea transparente */
+    text-shadow: none; /* Asegura que no haya sombras */
+    -webkit-text-stroke: 1px #f0f0f0; /* Crea el contorno */
+    animation: fillText 2s ease-in-out forwards;
 }
 
 .loading-message {
@@ -27,6 +30,42 @@
     text-align: center;
     padding: 0 20px;
     opacity: 0;
+}
+
+.loading-messages-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px; 
+    text-align: center;
+    opacity: 0;
+}
+
+.job-title-loading {
+    font-size: 1.2rem;
+    color: #b0b0b0; 
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.loading-messages-container.fade-in {
+    animation: fadeIn 0.8s ease-in-out forwards 0.5s;
+}
+
+.loading-messages-container.fade-out {
+    animation: fadeOut 0.5s ease-in-out forwards;
+}
+
+.loading-message-es {
+    font-size: 1.5rem;
+    font-weight: bold; 
+    color: #f0f0f0;
+}
+
+.loading-message-en {
+    font-size: 1.2rem;
+    font-style: italic; 
+    color: #b0b0b0;
 }
 
 .loading-message.fade-in {
@@ -78,4 +117,15 @@
 @keyframes fadeOut {
     from { opacity: 1; }
     to { opacity: 0; }
+}
+
+@keyframes fillText {
+    0% {
+        -webkit-text-stroke: 1px #f0f0f0;
+        color: transparent;
+    }
+    100% {
+        -webkit-text-stroke: 0px transparent;
+        color: #f0f0f0;
+    }
 }
