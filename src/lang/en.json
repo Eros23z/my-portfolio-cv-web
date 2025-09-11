@@ -61,6 +61,13 @@
         "responsibilities": [
           "Solution Developer on Dynamics 365 FO (ERP). X++ for functionality development (forms, tables, entities). I worked with SQL Server for queries and reports. I implemented queries with insert recordset and different types of joins in X++ to extract data from sales transactions and organizational hierarchies. Reduction of errors in advance billing and optimization of expense recording in projects. Resolved performance issues such as SQLExecution Timeout by optimizing filters, join conditions, and report pagination. Contributed to the customization of financial/operational modules, ensuring that billing and customer data loading processes were more efficient."
         ]
+      },
+      {
+        "company": "Trombofilia y Trombosis Argentina",
+        "position": "Freelance Web Developer",
+        "duration": "Jul 2025",
+        "logo": "/images/ong.png",
+        "responsibilities": "Development and optimization of an interactive contact module, incorporating form validation (HTML5) and anti-spam protection with Google reCAPTCHA v2. Formsubmit.co was integrated as a backendless service for efficient email management, overcoming challenges in configuring redirects and excluding sensitive data from emails."
       }
     ]
   },
@@ -95,7 +102,7 @@
         },
         {
           "title": "Trombosis y trombofilia Argentina",
-          "description": "Development and optimization of an interactive contact module, incorporating form validation (HTML5) and anti-spam protection with Google reCAPTCHA v2. Formsubmit.co was integrated as a backendless service for efficient email management, overcoming challenges in configuring redirects and excluding sensitive data from emails.",
+          "description": "Development of an informational website using HTML5, CSS3, JavaScript, and Bootstrap. Implementation of responsive design and optimization for SEO and performance. Direct work with client, delivery of functional product currently in use.",
           "image": "/images/ong.png",
           "technologies": ["HTML5", "CSS3", "JavaScript", "Bootstrap", "Git"],
           "link": "https://trombofiliaytrombosisargentina.netlify.app/"

@@ -61,6 +61,13 @@
         "duration": "Jul 2023 - Feb 2025",
         "logo": "/images/axxon.png",
         "responsibilities": "Solution Developer sobre Dynamics 365 FO (ERP). X++ para desarrollo de funcionalidades (formularios, tablas, entidades). Trabajé con SQL Server para consultas y reportes. Implementé consultas con insert recordset y diferentes tipos de join en X++ para extraer datos de transacciones de ventas y jerarquía organizacionales. Reducción de errores en la facturación anticipada y optimización del registro de gastos en proyectos. Resolución de problemas de performance como SQLExecution Timeout optimizando filtros, condiciones de joins y paginación de reportes. Contribuí a la personalización de módulos financieros/operativos, asegurando que los procesos de facturación y carga de datos de clientes fueran más eficientes."
+      },
+      {
+        "company": "Trombofilia y Trombosis Argentina",
+        "position": "Freelance Web Developer",
+        "duration": "Jul 2025",
+        "logo": "/images/ong.png",
+        "responsibilities": "Desarrollo y optimización de un módulo de contacto interactivo, que incorpora validación de formularios (HTML5) y protección antispam con Google reCAPTCHA v2. Formsubmit.co se integró como un servicio sin backend para una gestión eficiente del correo electrónico, superando los retos que planteaban la configuración de redireccionamientos y la exclusión de datos confidenciales de los correos electrónicos. "
       }
     ]
   },
@@ -95,7 +102,7 @@
         },
         {
           "title": "Trombosis y trombofilia Argentina",
-          "description": "Desarrollo y optimización de un módulo de contacto interactivo, que incorpora validación de formularios (HTML5) y protección antispam con Google reCAPTCHA v2. Formsubmit.co se integró como un servicio sin backend para una gestión eficiente del correo electrónico, superando los retos que planteaban la configuración de redireccionamientos y la exclusión de datos confidenciales de los correos electrónicos.",
+          "description": "Desarrollo de sitio web informativo con HTML5, CSS3, JavaScript y Bootstrap. Implementación de diseño adaptable (responsive) y optimización para SEO y rendimiento. Trabajo directo con cliente, entrega de producto funcional utilizado actualmente.",
           "image": "/images/ong.png",
           "technologies": ["HTML5", "CSS3", "JavaScript", "Bootstrap", "Git"],
           "link": "https://trombofiliaytrombosisargentina.netlify.app/"
