@@ -1,7 +1,7 @@
 import React from 'react';
 import { useLanguage } from '../context/LanguageContext';
 import { motion } from 'framer-motion';
-import { GraduationCap, Award, Calendar } from 'lucide-react';
+import { GraduationCap, Award } from 'lucide-react';
 
 function Education() {
   const { text } = useLanguage();

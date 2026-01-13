@@ -1,7 +1,6 @@
-import React, { useRef } from 'react';
 import { useLanguage } from '../context/LanguageContext';
-import { ExternalLink, Github, Code2, Layers } from 'lucide-react';
-import { motion, useScroll, useTransform } from 'framer-motion';
+import { ExternalLink, Code2, Layers } from 'lucide-react';
+import { motion } from 'framer-motion';
 
 function Projects() {
   const { text } = useLanguage();
