@@ -1,72 +1,62 @@
-import React, { useState, useEffect } from 'react';
-import './LoadingScreen.css';
-
-const messages = [
-    {
-        es: "Desarrollador Full-Stack apasionado por crear soluciones innovadoras.",
-        en: "Passionate Full-Stack Developer creating innovative solutions."
-    },
-    {
-        es: "Experiencia probada en React, .NET y bases de datos robustas.",
-        en: "Proven experience in React, .NET, and robust databases."
-    },
-    {
-        es: "Enfoque en código limpio, eficiente y de alto rendimiento.",
-        en: "Focused on clean, efficient, and high-performance code."
-    },
-    {
-        es: "Colaborador entusiasta y solucionador de problemas creativo.",
-        en: "An enthusiastic collaborator and creative problem-solver."
-    },
-    {
-        es: "Listo para aportar valor inmediato a tu equipo.",
-        en: "Ready to add immediate value to your team."
-    }
-];
+import React, { useEffect, useState } from 'react';
+import { motion } from 'framer-motion';
 
 function LoadingScreen({ onLoadingComplete }) {
-    const [currentMessage, setCurrentMessage] = useState('');
-    const [isMessageVisible, setIsMessageVisible] = useState(true);
-    const [isLoadingScreenVisible, setIsLoadingScreenVisible] = useState(true);
+  const [progress, setProgress] = useState(0);
 
-    useEffect(() => {
-        const randomIndex = Math.floor(Math.random() * messages.length);
-        setCurrentMessage(messages[randomIndex]);
+  useEffect(() => {
+    // Simulamos la carga
+    const timer = setInterval(() => {
+      setProgress((oldProgress) => {
+        if (oldProgress === 100) {
+          clearInterval(timer);
+          // Esperamos un momento antes de avisar que terminó
+          setTimeout(onLoadingComplete, 500);
+          return 100;
+        }
+        // Hacemos que la carga sea "aleatoria" para que parezca real
+        const diff = Math.random() * 10;
+        return Math.min(oldProgress + diff, 100);
+      });
+    }, 100);
 
-        // 1. Oculta el mensaje después de 2 segundos 
-        const messageTimer = setTimeout(() => {
-            setIsMessageVisible(false);
-        }, 2500);
+    return () => clearInterval(timer);
+  }, [onLoadingComplete]);
 
-        // 2. Oculta la pantalla completa después de 3 segundos
-        const screenTimer = setTimeout(() => {
-            setIsLoadingScreenVisible(false);
-            onLoadingComplete();
-        }, 3500);
+  return (
+    <motion.div
+      // CAMBIO CLAVE: En lugar de "y: -100%" (subir), usamos "opacity: 0" (desvanecer)
+      exit={{ opacity: 0 }}
+      transition={{ duration: 0.8, ease: "easeInOut" }}
+      className="fixed inset-0 z-[9999] flex flex-col items-center justify-center bg-background text-foreground"
+    >
+      <div className="w-64 flex flex-col gap-4">
+        {/* Nombre Sutil */}
+        <motion.p 
+            initial={{ opacity: 0, y: 10 }}
+            animate={{ opacity: 1, y: 0 }}
+            className="text-center text-sm font-medium tracking-[0.2em] text-muted-foreground uppercase"
+        >
+            Eros Daniel Zamora
+        </motion.p>
 
-        return () => {
-            clearTimeout(messageTimer);
-            clearTimeout(screenTimer);
-        };
-    }, [onLoadingComplete]);
-
-    return isLoadingScreenVisible ? (
-        <div className="loading-screen">
-            <h1 className="my-name">Eros Daniel Zamora</h1>
-            <p className="job-title-loading">Software Developer</p> 
-            {currentMessage && (
-                <div className={`loading-messages-container ${isMessageVisible ? 'fade-in' : 'fade-out'}`}>
-                    <p className="loading-message-es">{currentMessage.es}</p>
-                    <p className="loading-message-en">{currentMessage.en}</p>
-                </div>
-            )}
-            <div className="loading-dots">
-                <span className="dot"></span>
-                <span className="dot"></span>
-                <span className="dot"></span>
-            </div>
+        {/* Barra de Progreso Fina y Elegante */}
+        <div className="h-[2px] w-full bg-secondary overflow-hidden rounded-full">
+            <motion.div 
+                className="h-full bg-primary"
+                style={{ width: `${progress}%` }}
+                // Layout spring para que el movimiento de la barra sea suave
+                layoutId="progress-bar" 
+            />
         </div>
-    ) : null;
+
+        {/* Porcentaje (Opcional, si quieres que sea ultra minimalista puedes quitar esto) */}
+        <p className="text-right text-xs text-muted-foreground font-mono">
+            {Math.round(progress)}%
+        </p>
+      </div>
+    </motion.div>
+  );
 }
 
 export default LoadingScreen;

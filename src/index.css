@@ -1,62 +1,43 @@
-:root,
-body.dark {
-  --background-primary: #121212;
-  --background-secondary: #1E1E1E;
-  --card-background: #2C2C2C;
-  --accent-color: #00ADB5;
-  --accent-color-dark: #00828A;
-  --text-color-primary: #EEEEEE;
-  --text-color-secondary: #A0A0A0;
-  --text-color-light: #FFFFFF;
-  --border-color: #3A3A3A;
-  --shadow-light: rgba(0, 0, 0, 0.2);
-  --shadow-dark: rgba(0, 0, 0, 0.4);
-  --shadow-darker: rgba(0, 0, 0, 0.6);
-}
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
-body.light {
-  --background-primary: #F0F0F0; 
-  --background-secondary: #FFFFFF; 
-  --card-background: #E0E0E0; 
-  --accent-color: #3F51B5; 
-  --accent-color-dark: #2C3E9C; 
-  --text-color-primary: #333333; 
-  --text-color-secondary: #666666; 
-  --text-color-light: #FFFFFF; 
-  --border-color: #CCCCCC; 
-  --shadow-light: rgba(0, 0, 0, 0.1);
-  --shadow-dark: rgba(0, 0, 0, 0.2);
-  --shadow-darker: rgba(0, 0, 0, 0.3);
+@layer base {
+  :root {
+    /* MODO CLARO */
+    --background: 250 250 250;
+    --foreground: 9 9 11;
+    --card: 255 255 255;
+    --card-foreground: 9 9 11;
+    --primary: 37 99 235; /* Azul intenso */
+    --primary-foreground: 250 250 250;
+    --secondary: 244 244 245; /* Gris muy suave */
+    --secondary-foreground: 24 24 27;
+    --muted: 244 244 245;
+    --muted-foreground: 113 113 122; /* Texto gris */
+    --accent: 244 244 245;
+    --accent-foreground: 24 24 27;
+    --border: 228 228 231; /* Borde gris suave */
+  }
+
+  .dark {
+    /* MODO OSCURO */
+    --background: 9 9 11; /* Negro casi total */
+    --foreground: 250 250 250;
+    --card: 9 9 11;
+    --card-foreground: 250 250 250;
+    --primary: 59 130 246; /* Azul brillante */
+    --primary-foreground: 255 255 255;
+    --secondary: 39 39 42; /* Gris oscuro */
+    --secondary-foreground: 250 250 250;
+    --muted: 39 39 42;
+    --muted-foreground: 161 161 170;
+    --accent: 39 39 42;
+    --accent-foreground: 250 250 250;
+    --border: 39 39 42;
+  }
 }
 
 body {
-  margin: 0;
-  font-family: 'Arial', sans-serif; 
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  background-color: var(--background-primary);
-  color: var(--text-color-primary);
-  transition: background-color 0.3s ease, color 0.3s ease;
-}
-
-::-webkit-scrollbar {
-  width: 10px;
-}
-
-::-webkit-scrollbar-track {
-  background: var(--background-secondary);
-}
-
-::-webkit-scrollbar-thumb {
-  background: var(--accent-color);
-  border-radius: 5px;
-}
-
-::-webkit-scrollbar-thumb:hover {
-  background: var(--accent-color-dark);
-}
-
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+  @apply bg-background text-foreground transition-colors duration-300 antialiased;
 }

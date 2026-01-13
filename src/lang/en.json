@@ -1,7 +1,18 @@
 {
   "header": {
-    "jobTitle": "Sofware Developer",
-    "name": "Eros Daniel Zamora"
+    "jobTitle": "Software Developer",
+    "name": "Eros Daniel Zamora",
+    "status": "Available for new projects",
+    "role": "Full Stack Developer & UI/UX Enthusiast",
+    "descriptionPart1": "Building ",
+    "descriptionBlue1": "accessible",
+    "descriptionPart2": ", ",
+    "descriptionBlue2": "pixel-perfect",
+    "descriptionPart3": ", and ",
+    "descriptionBlue3": "performant",
+    "descriptionPart4": " web experiences.",
+    "btnCheck": "Check my Work",
+    "btnCV": "Download CV"
   },
   "about": {
     "title": "ABOUT ME",

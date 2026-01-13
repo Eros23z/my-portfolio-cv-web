@@ -1,97 +1,97 @@
 import React from 'react';
-import './Skills.css';
-import './LanguageAnimationChange.css';
-import useScrollAnimation from '../hooks/useScrollAnimation'; 
 import { useLanguage } from '../context/LanguageContext';
+import { RenderIconCloud } from './ui/IconCloud';
+import { motion } from 'framer-motion';
 
-const skillsData = {
-  frontend: [
-    { name: 'HTML5', icon: 'fab fa-html5' },
-    { name: 'CSS3', icon: 'fab fa-css3-alt' },
-    { name: 'React', icon: 'fab fa-react' },
-    { name: 'JavaScript', icon: 'fab fa-js' },
-    { name: 'TypeScript', icon: 'devicon-typescript-plain' },
-    { name: 'Bootstrap', icon: 'fab fa-bootstrap' },
-  ],
-  backend: [
-    { name: '.NET / ASP.NET', icon: 'devicon-dot-net-plain' },
-    { name: 'Node.js', icon: 'fab fa-node-js' },
-    { name: 'EF Core', icon: 'fas fa-database' },
-    { name: 'Sequelize', icon: 'fas fa-database' },
-    { name: 'C#', icon: 'devicon-csharp-plain' }, 
-    { name: 'Express.js', icon: 'devicon-express-original' },
-  ],
-  databases: [
-    { name: 'MySQL', icon: 'fas fa-database' },
-    { name: 'Oracle', icon: 'fas fa-database' },
-    { name: 'MongoDB', icon: 'fas fa-leaf' },
-    { name: 'SQL Server', icon: 'fas fa-database' },
-  ],
-  goodPractices: [
-    { name: 'Clean Architecture', icon: 'fas fa-laptop-code' },
-    { name: 'SOLID Principles', icon: 'fas fa-shield-alt' },
-    { name: 'Dependency Injection', icon: 'fas fa-plug' },
-
-  ],
-  Extras: [
-    { name: 'ERP Microsoft Dynamics 365 F&O', icon: 'fas fa-cloud' },
-    { name: 'X++', icon: 'fas fa-code' }, 
-  ],
-  conceptsArchitecture: [
-    { name: 'API RESTful', icon: 'fas fa-exchange-alt' },
-  ],
-  toolsVersionControl: [
-    { name: 'Git', icon: 'fab fa-git-alt' },
-    { name: 'GitHub', icon: 'fab fa-github' },
-  ],
-  methodologies: [
-    { name: 'Agile', icon: 'fas fa-users' },
-    { name: 'Scrum', icon: 'fas fa-running' },
-    { name: 'Kanban', icon: 'fas fa-columns' },
-  ],
-  languagesSpoken: [
-    { name: 'Spanish (Native)', icon: 'fas fa-language' },
-    { name: 'English (B2)', icon: 'fas fa-language' },
-  ],
-};
+// Lista de tecnologías para la esfera 3D (deben coincidir con simpleicons.org)
+const slugs = [
+  "typescript", "javascript", "react", "html5", "css3", "nodedotjs", 
+  "express", "nextdotjs", "prisma", "amazonaws", "postgresql", 
+  "firebase", "vercel", "testinglibrary", "jest", "docker", "git", 
+  "github", "visualstudiocode", "csharp", "dotnet", "microsoftsqlserver", 
+  "mongodb", "bootstrap", "tailwindcss"
+];
 
 function Skills() {
-  const { text, isAnimating } = useLanguage();
-  const [domRef, isVisible] = useScrollAnimation(0.2); 
+  const { text } = useLanguage();
+
   return (
-    <section id='skills' ref={domRef} className={`skills-section fade-in-slide-up ${isVisible ? 'scroll-animate is-visible' : 'scroll-animate'}`}>
-      <div className={isAnimating ? 'fade-out' : 'fade-in'}>
-        <h2 className="skills-title">{text.skills.title}</h2>
-        <div className="skills-grid">
-          {Object.entries(skillsData).map(([category, skills]) => (
-            <div key={category} className="skill-category">
-              <h3 className="category-title">{text.skills[category]}</h3> 
-             <div className="skill-items">
-                {skills.map((skill) => (
-                 <div key={skill.name} className="skill-item">
-                   <i className={`${skill.icon} skill-icon`}></i>
-                   <span className="skill-name">{skill.name}</span>
-                 </div>
-                ))}
-             </div>
-           </div>
-         ))}
-        </div>
-        <div className="skills-section">
-          <h2 className='skills-title'>{text.skills.downloadTitle}</h2>
-          <div className='skill-category'>
-           <a href="/CV-Eros.pdf" download className="download-button">
-            <i className="fas fa-file-pdf"></i> Descargar CV
-            </a>
-            &nbsp;
-            <a href="/CV_Eros_English.pdf" download className="download-button">
-              <i className="fas fa-file-pdf"></i> Download CV (English)
-            </a>
+    <section id="skills" className="relative flex min-h-screen w-full flex-col items-center justify-center overflow-hidden bg-background px-4 py-20">
+      
+      {/* Título animado */}
+      <motion.div 
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.5 }}
+        viewport={{ once: true }}
+        className="z-10 flex flex-col items-center text-center mb-12"
+      >
+        <h2 className="text-4xl md:text-5xl font-bold bg-clip-text text-transparent bg-gradient-to-b from-foreground to-foreground/60">
+          {text.skills.title}
+        </h2>
+        <div className="h-1 w-20 bg-primary mt-4 rounded-full" />
+      </motion.div>
+
+      <div className="flex flex-col lg:flex-row items-center justify-between gap-12 w-full max-w-6xl">
+          
+          {/* Columna Izquierda: Categorías de Texto */}
+          <div className="w-full lg:w-1/2 grid grid-cols-1 sm:grid-cols-2 gap-6">
+               <SkillCategory title={text.skills.frontend} items={["React", "HTML5", "CSS3", "Tailwind", "Bootstrap", "JavaScript", "TypeScript"]} delay={0.1} />
+               <SkillCategory title={text.skills.backend} items={["C# .NET", "Node.js", "Express", "EF Core", "Sequelize"]} delay={0.2} />
+               <SkillCategory title={text.skills.databases} items={["SQL Server", "MySQL", "MongoDB", "Oracle"]} delay={0.3} />
+               <SkillCategory title={text.skills.toolsVersionControl} items={["Git", "GitHub", "Visual Studio"]} delay={0.4} />
+               <SkillCategory title={text.skills.methodologies} items={["Agile", "Scrum", "SOLID", "Clean Arch"]} delay={0.5} />
+               
+               {/* Botón de descarga de CV */}
+               <motion.div 
+                 initial={{ opacity: 0, scale: 0.9 }}
+                 whileInView={{ opacity: 1, scale: 1 }}
+                 transition={{ delay: 0.6 }}
+                 className="col-span-1 sm:col-span-2 mt-4 flex flex-wrap gap-4 justify-center sm:justify-start"
+               >
+                 <a href="/CV-Eros.pdf" download className="px-6 py-3 rounded-full bg-primary text-white font-bold hover:bg-primary/80 transition-all shadow-lg hover:shadow-primary/30 flex items-center gap-2">
+                    📄 Descargar CV (Español)
+                 </a>
+                 <a href="/CV_Eros_English.pdf" download className="px-6 py-3 rounded-full bg-card border border-border text-foreground font-bold hover:bg-accent hover:text-white transition-all shadow-lg flex items-center gap-2">
+                    📄 Download CV (English)
+                 </a>
+               </motion.div>
           </div>
-        </div>
+
+          {/* Columna Derecha: Nube Interactiva */}
+          <motion.div 
+            initial={{ opacity: 0, scale: 0.8 }}
+            whileInView={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 0.8 }}
+            className="w-full lg:w-1/2 flex justify-center"
+          >
+              <div className="relative flex h-full w-full max-w-[32rem] items-center justify-center overflow-hidden rounded-full bg-background/50 border border-white/10 shadow-2xl pb-10 pt-10">
+                  <RenderIconCloud iconSlugs={slugs} />
+              </div>
+          </motion.div>
       </div>
     </section>
   );
 }
+
+// Componente auxiliar para las tarjetas de categorías
+const SkillCategory = ({ title, items, delay }) => (
+    <motion.div 
+      initial={{ opacity: 0, x: -20 }}
+      whileInView={{ opacity: 1, x: 0 }}
+      transition={{ delay: delay, duration: 0.5 }}
+      viewport={{ once: true }}
+      className="p-5 rounded-2xl border border-border bg-card/50 backdrop-blur-sm hover:border-primary/50 transition-colors group"
+    >
+        <h3 className="text-lg font-bold text-primary mb-3 group-hover:text-primary/80">{title}</h3>
+        <div className="flex flex-wrap gap-2">
+            {items.map(item => (
+                <span key={item} className="px-2.5 py-1 text-xs font-medium rounded-md bg-secondary text-secondary-foreground border border-border/50">
+                    {item}
+                </span>
+            ))}
+        </div>
+    </motion.div>
+);
 
 export default Skills;

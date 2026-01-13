@@ -1,7 +1,18 @@
 {
   "header": {
     "jobTitle": "Desarrollador de Software",
-    "name": "Eros Daniel Zamora"
+    "name": "Eros Daniel Zamora",
+    "status": "Disponible para nuevos proyectos",
+    "role": "Desarrollador Full Stack y Entusiasta UI/UX",
+    "descriptionPart1": "Construyendo experiencias web ",
+    "descriptionBlue1": "accesibles",
+    "descriptionPart2": ", ",
+    "descriptionBlue2": "pixel-perfect",
+    "descriptionPart3": " y de ",
+    "descriptionBlue3": "alto rendimiento",
+    "descriptionPart4": ".",
+    "btnCheck": "Ver Proyectos",
+    "btnCV": "Descargar CV"
   },
   "about": {
     "title": "Sobre Mí",
