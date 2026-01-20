@@ -69,7 +69,7 @@ function Skills() {
                  transition={{ delay: 0.6 }}
                  className="col-span-1 sm:col-span-2 mt-4 flex flex-wrap gap-4 justify-center sm:justify-start"
                >
-                 <a href="/CV-Eros.pdf" download className="px-6 py-3 rounded-full bg-primary text-white font-bold hover:bg-primary/80 transition-all shadow-lg hover:shadow-primary/30 flex items-center gap-2">
+                 <a href="/CV_Eros.pdf" download className="px-6 py-3 rounded-full bg-primary text-white font-bold hover:bg-primary/80 transition-all shadow-lg hover:shadow-primary/30 flex items-center gap-2">
                      Descargar CV (Español)
                  </a>
                  <a href="/CV_Eros_English.pdf" download className="px-6 py-3 rounded-full bg-card border border-border text-foreground font-bold hover:bg-accent hover:text-white transition-all shadow-lg flex items-center gap-2">
