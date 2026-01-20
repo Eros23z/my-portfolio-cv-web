@@ -1,35 +1,36 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { useLanguage } from '../context/LanguageContext';
-import { motion } from 'framer-motion';
-import { Briefcase, Calendar } from 'lucide-react';
+import { motion, AnimatePresence } from 'framer-motion';
+import { Briefcase, Calendar, ChevronUp, Code2, CheckCircle2 } from 'lucide-react';
 
 function Experience() {
   const { text } = useLanguage();
   const experienceData = text.experience.jobs;
 
   return (
-    <section id="experience" className="py-20 bg-background overflow-hidden">
-      <div className="max-w-4xl mx-auto px-6 relative">
+    <section id="experience" className="py-24 relative">
+      <div className="max-w-4xl mx-auto px-6 relative z-10">
         
-        {/* Título de la sección */}
+        {/* Encabezado */}
         <motion.div 
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
           viewport={{ once: true }}
           className="text-center mb-16"
         >
-          <h2 className="text-4xl md:text-5xl font-bold mb-4 bg-clip-text text-transparent bg-gradient-to-r from-primary to-blue-600">
+          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-secondary border border-border text-sm font-medium mb-4 text-muted-foreground">
+             <Briefcase className="w-4 h-4 text-primary" />
+             <span>Career Path</span>
+          </div>
+          <h2 className="text-3xl md:text-5xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-foreground to-foreground/50">
             {text.experience.title}
           </h2>
-          <div className="h-1.5 w-24 bg-primary mx-auto rounded-full opacity-80" />
         </motion.div>
 
-        {/* Línea vertical del Timeline (Conector) */}
-        <div className="absolute left-6 md:left-1/2 top-32 bottom-20 w-0.5 bg-border md:-translate-x-1/2" />
-
-        <div className="flex flex-col gap-12">
+        {/* Lista de Trabajos (Accordion) */}
+        <div className="flex flex-col gap-6">
           {experienceData.map((job, index) => (
-            <TimelineItem key={index} job={job} index={index} />
+            <ExperienceCard key={index} job={job} index={index} text={text} />
           ))}
         </div>
       </div>
@@ -37,59 +38,94 @@ function Experience() {
   );
 }
 
-const TimelineItem = ({ job, index }) => {
-  const isEven = index % 2 === 0;
+const ExperienceCard = ({ job, index, text }) => {
+  const [isOpen, setIsOpen] = useState(index === 0); // El primero abierto por defecto
 
   return (
     <motion.div 
-      initial={{ opacity: 0, x: isEven ? -50 : 50 }}
-      whileInView={{ opacity: 1, x: 0 }}
-      viewport={{ once: true, margin: "-100px" }}
-      transition={{ duration: 0.6, delay: index * 0.1 }}
-      className={`relative flex flex-col md:flex-row items-center md:justify-between ${
-        isEven ? "md:flex-row-reverse" : ""
-      }`}
+      initial={{ opacity: 0, y: 20 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true }}
+      transition={{ delay: index * 0.1 }}
+      className={`border rounded-2xl overflow-hidden transition-all duration-300 ${isOpen ? 'bg-card border-primary/30 shadow-lg' : 'bg-card/40 border-border hover:border-primary/20'}`}
     >
-      {/* Punto central del Timeline */}
-      <div className="absolute left-0 md:left-1/2 w-4 h-4 bg-primary rounded-full border-4 border-background shadow-lg z-10 md:-translate-x-1/2 translate-y-1.5 md:translate-y-0 flex items-center justify-center">
-        <div className="w-full h-full rounded-full animate-ping opacity-20 bg-primary absolute" />
-      </div>
+      {/* Cabecera (Siempre visible) */}
+      <div 
+        onClick={() => setIsOpen(!isOpen)}
+        className="p-6 cursor-pointer flex flex-col md:flex-row md:items-center justify-between gap-4"
+      >
+        <div className="flex items-start gap-4">
+            <div className={`p-3 rounded-xl transition-colors ${isOpen ? 'bg-primary/20 text-primary' : 'bg-secondary text-muted-foreground'}`}>
+                <Briefcase className="w-6 h-6" />
+            </div>
+            <div>
+                <h3 className="text-xl font-bold text-foreground">{job.position}</h3>
+                <p className="text-lg text-muted-foreground">{job.company}</p>
+            </div>
+        </div>
 
-      {/* Espacio vacío para alinear en desktop */}
-      <div className="hidden md:block w-1/2" />
-
-      {/* Tarjeta de Contenido */}
-      <div className={`w-full md:w-[45%] pl-8 md:pl-0 ${isEven ? "md:pr-8 md:text-right" : "md:pl-8 md:text-left"}`}>
-        <div className="p-6 bg-card border border-border rounded-2xl shadow-sm hover:shadow-md hover:border-primary/30 transition-all group">
-          
-          <div className={`flex flex-col gap-1 mb-4 ${isEven ? "md:items-end" : "md:items-start"}`}>
-            <h3 className="text-xl font-bold text-foreground group-hover:text-primary transition-colors">
-              {job.position}
-            </h3>
-            <h4 className="text-lg font-medium text-muted-foreground flex items-center gap-2">
-              <Briefcase className="w-4 h-4" />
-              {job.company}
-            </h4>
-            <span className="text-sm font-semibold text-primary bg-primary/10 px-3 py-1 rounded-full flex items-center gap-1.5 w-fit mt-1">
-              <Calendar className="w-3 h-3" />
-              {job.duration}
+        <div className="flex flex-col md:items-end gap-2">
+            <span className="flex items-center gap-2 text-sm font-medium text-muted-foreground bg-secondary px-3 py-1 rounded-full w-fit">
+                <Calendar className="w-3 h-3" /> {job.duration}
             </span>
-          </div>
-
-          <p className="text-muted-foreground text-sm leading-relaxed mb-4">
-            {job.responsibilities}
-          </p>
-          
-          {/* Si quieres convertir las responsabilidades en lista (opcional, si el texto lo permite) */}
-          {/* <ul className={`space-y-2 mt-4 ${isEven ? "md:items-end" : ""}`}>
-             <li className="flex items-start gap-2 text-sm text-muted-foreground">
-               <CheckCircle2 className="w-4 h-4 text-primary shrink-0 mt-0.5" />
-               <span>Logró mejorar X en Y%</span>
-             </li>
-          </ul> 
-          */}
+            {/* Badges de tecnología visibles en modo colapsado */}
+            {!isOpen && (
+                <div className="flex gap-2 mt-1">
+                    {job.technologies.slice(0, 3).map((tech, i) => (
+                        <span key={i} className="text-xs px-2 py-0.5 rounded-md bg-secondary text-muted-foreground border border-border">
+                            {tech}
+                        </span>
+                    ))}
+                    {job.technologies.length > 3 && <span className="text-xs text-muted-foreground">+{job.technologies.length - 3}</span>}
+                </div>
+            )}
         </div>
       </div>
+
+      {/* Cuerpo Expandible */}
+      <AnimatePresence>
+        {isOpen && (
+          <motion.div
+            initial={{ height: 0, opacity: 0 }}
+            animate={{ height: "auto", opacity: 1 }}
+            exit={{ height: 0, opacity: 0 }}
+            transition={{ duration: 0.3 }}
+          >
+            <div className="px-6 pb-6 pt-0 border-t border-border/50">
+                
+                {/* Stack Tecnológico Completo */}
+                <div className="flex flex-wrap gap-2 my-4">
+                    {job.technologies.map((tech, i) => (
+                        <span key={i} className="flex items-center gap-1.5 text-xs font-semibold px-2.5 py-1 rounded-full bg-primary/10 text-primary border border-primary/20">
+                            <Code2 className="w-3 h-3" /> {tech}
+                        </span>
+                    ))}
+                </div>
+
+                {/* Responsabilidades */}
+                <div className="space-y-3 pl-2 border-l-2 border-primary/10">
+                    {job.responsibilities.map((resp, i) => (
+                        <div key={i} className="flex items-start gap-3">
+                             <CheckCircle2 className="w-4 h-4 text-primary mt-1 shrink-0" />
+                             <p className="text-foreground/80 leading-relaxed text-sm md:text-base">
+                                {resp}
+                             </p>
+                        </div>
+                    ))}
+                </div>
+
+                <div className="mt-4 flex justify-center md:justify-end">
+                    <button 
+                        onClick={(e) => { e.stopPropagation(); setIsOpen(false); }}
+                        className="text-xs font-medium text-muted-foreground hover:text-primary flex items-center gap-1 transition-colors"
+                    >
+                        {text.experience.hideDetails} <ChevronUp className="w-3 h-3" />
+                    </button>
+                </div>
+            </div>
+          </motion.div>
+        )}
+      </AnimatePresence>
     </motion.div>
   );
 };

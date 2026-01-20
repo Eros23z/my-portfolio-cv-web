@@ -8,20 +8,18 @@
     "descriptionBlue1": "accesibles",
     "descriptionPart2": ", ",
     "descriptionBlue2": "pixel-perfect",
-    "descriptionPart3": " y de ",
-    "descriptionBlue3": "alto rendimiento",
+    "descriptionPart3": " y ",
+    "descriptionBlue3": "de alto rendimiento",
     "descriptionPart4": ".",
     "btnCheck": "Ver Proyectos",
     "btnCV": "Descargar CV"
   },
   "about": {
     "title": "Sobre Mí",
-    "paragraph1": "Soy desarrollador de software con una sólida formación técnica y experiencia en la creación de aplicaciones y soluciones tecnológicas. Me apasiona aprender nuevas tecnologías y contribuir en un entorno colaborativo, siempre buscando mejorar mis habilidades y ofrecer soluciones eficientes.",
-    "paragraph2": "Tengo experiencia en el desarrollo de aplicaciones web, así como en la implementación de soluciones personalizadas soluciones personalizadas para clientes. Destaco por mi capacidad para resolver problemas complejos y mi atención al detalle.",
-    "paragraph3": "Me considero una persona proactiva con habilidades de comunicación eficaces y un fuerte compromiso con el trabajo de calidad. Siempre estoy dispuesto a aprender y adaptarme a nuevas tecnologías y metodologías de trabajo.",
-    "paragraph4": "¡Listo para asumir nuevos retos y contribuir a proyectos innovadores!",
-    "showMore": "Mostrar Más",
-    "showLess": "Mostrar Menos"
+    "paragraph1": "Soy desarrollador Full-Stack versátil con sólida experiencia tanto en el ecosistema .NET (.NET 9, Blazor) como en JavaScript (React, Node.js). Me especializo en la arquitectura de aplicaciones empresariales escalables.",
+    "paragraph2": "Tengo capacidad probada para construir aplicaciones end-to-end aplicando principios SOLID, seguridad y buenas prácticas modernas. Me destaco por resolver problemas complejos de ingeniería de datos y performance.",
+    "paragraph3": "Me considero una persona proactiva con habilidades de comunicación eficaces y un fuerte compromiso con el trabajo de calidad.",
+    "paragraph4": "¡Listo para asumir nuevos retos y contribuir a proyectos innovadores!"
   },
   "skills": {
     "title": "Habilidades",
@@ -29,100 +27,128 @@
     "backend": "Backend",
     "goodPractices": "Buenas Prácticas",
     "databases": "Bases de Datos",
-    "toolsVersionControl": "Herramientas y Control de Versiones",
+    "toolsVersionControl": "Herramientas",
     "methodologies": "Metodologías",
-    "conceptsArchitecture": "Conceptos y Arquitecturas",
-    "platformsERP": "Plataformas / ERP",
-    "Extras": "Extras",
-    "languagesSpoken": "Idiomas",
+    "extras": "Extras",
     "downloadTitle": "Descargar mi Curriculum Vitae"
   },
   "education": {
     "title": "Educación",
     "institutions": [
       {
-        "institution": "Instituto Educativo Cristo Rey",
-        "backgroundText": "Colegio",
-        "alignment": "left",
-        "logo": "Cristo Rey Instituto Emblem.png",
-        "details": [
-        "Humanidades y Ciencias Sociales",
-        "Año de graduación: 2016"
-        ]
-      },
-      {
         "institution": "Universidad de La Punta, San Luis",
         "backgroundText": "Universidad",
-        "alignment": "right",
-        "logo": "ulp.png",
+        "alignment": "center",
+        "logo": "/images/ulp.png",
         "details": [
           "Tecnicatura Universitaria en Desarrollo de Software",
           "Año de inicio: 2018",
-          "Estado: En curso"
+          "Estado: Etapa final"
         ]
       }
     ]
   },
   "experience": {
     "title": "Experiencia",
+    "showDetails": "Ver detalles",
+    "hideDetails": "Ocultar detalles",
     "jobs": [
       {
-        "company": "Axxon Consulting",
-        "position": "Desarrollador de Software",
-        "duration": "Jul 2023 - Feb 2025",
-        "logo": "/images/axxon.png",
-        "responsibilities": "Solution Developer sobre Dynamics 365 FO (ERP). X++ para desarrollo de funcionalidades (formularios, tablas, entidades). Trabajé con SQL Server para consultas y reportes. Implementé consultas con insert recordset y diferentes tipos de join en X++ para extraer datos de transacciones de ventas y jerarquía organizacionales. Reducción de errores en la facturación anticipada y optimización del registro de gastos en proyectos. Resolución de problemas de performance como SQLExecution Timeout optimizando filtros, condiciones de joins y paginación de reportes. Contribuí a la personalización de módulos financieros/operativos, asegurando que los procesos de facturación y carga de datos de clientes fueran más eficientes."
+        "company": "Ceva Logistics",
+        "position": "Desarrollo Fullstack .NET (Freelance)",
+        "duration": "Nov 2025 - Dic 2025",
+        "logo": "/images/ceva.png",
+        "technologies": [".NET 9", "Blazor", "MudBlazor", "EF Core", "IIS", "SQL Server", "ASP.NET Identity"],
+        "responsibilities": [
+            "Arquitectura Enterprise: Desarrollo de WMS escalable cumpliendo estándares de auditoría corporativa.",
+            "Ingeniería de Datos: Motor de ingesta masiva de Excel con algoritmos de limpieza y validación.",
+            "Seguridad y Performance: Implementación de RBAC y paginación Server-Side para grandes volúmenes de datos."
+        ]
       },
       {
-        "company": "Trombofilia y Trombosis Argentina",
-        "position": "Freelance Web Developer",
+        "company": "Proyecto Confidencial (P2P Rental)",
+        "position": "Desarrollador Full-Stack",
+        "duration": "Sep 2025",
+        "logo": "/images/Rydox-logo.png",
+        "technologies": ["PostgreSQL", "React", "Node.js", "Socket.IO", "Mercado Pago", "Express.js", "Prisma ORM"],
+        "responsibilities": [
+            "Arquitectura y Seguridad: API RESTful con autenticación JWT doble token y cookies HttpOnly.",
+            "Real-Time: Chat en vivo con Socket.IO y pasarela de pagos integrada.",
+            "Integridad de Datos: Lógica de validación de turnos mediante códigos de seguridad únicos."
+        ]
+      },
+      {
+        "company": "Trombosis y Trombofilia Argentina",
+        "position": "Desarrollador Web Freelance",
         "duration": "Jul 2025",
         "logo": "/images/ong.png",
-        "responsibilities": "Desarrollo y optimización de un módulo de contacto interactivo, que incorpora validación de formularios (HTML5) y protección antispam con Google reCAPTCHA v2. Formsubmit.co se integró como un servicio sin backend para una gestión eficiente del correo electrónico, superando los retos que planteaban la configuración de redireccionamientos y la exclusión de datos confidenciales de los correos electrónicos. "
+        "technologies": ["HTML5", "Bootstrap", "JavaScript", "reCAPTCHA"],
+        "responsibilities": [
+            "Desarrollo Frontend: Construcción del sitio utilizando HTML5, CSS3, JavaScript y Bootstrap.",
+            "Seguridad y Contacto: Implementación de módulo de contacto con validación HTML5 y protección anti-spam (Google reCAPTCHA v2).",
+            "Backendless Email: Integración de Formsubmit.co para gestión eficiente de correos, resolviendo desafíos de redirección y privacidad de datos sensibles."
+        ]
+      },
+      {
+        "company": "Axxon Consulting",
+        "position": "Desarrollador de Soluciones",
+        "duration": "Jul 2023 - Feb 2025",
+        "logo": "/images/axxon.png",
+        "technologies": ["Dynamics 365", "X++", "SQL Server", "Azure Devops"],
+        "responsibilities": [
+            "Desarrollo ERP: Personalización de Dynamics 365 FO usando X++.",
+            "Optimización SQL: Mejora de performance en reportes financieros y consultas complejas.",
+            "Módulos Financieros: Implementación de entidades y formularios para facturación y gestión de proyectos."
+        ]
       }
     ]
   },
   "projects": {
-    "title": "Proyectos Destacados",
+    "title": "Proyectos destacados",
+    "viewMore": "Ver Detalles",
+    "close": "Cerrar",
     "allProjects": [
         {
-          "title": "Organizador de Eventos",
-          "description": "Desarrollo personal universitario para un organizador de eventos con ABM para contactos, clientes y eventos.",
-          "image": "/images/agenda.png",
-          "technologies": ["C#"]
+          "title": "WMS - Gestión Logística Internacional",
+          "description": "Sistema de gestión de almacenes (Warehouse Management System) desarrollado a medida. Enfocado en la ingesta masiva de datos y control de stock con alta performance.",
+          "fullDescription": "Desarrollé un WMS escalable utilizando lo último de .NET 9. desde el diseño hasta la configuración y despliegue en producción sobre IIS, asegurando alta disponibilidad y gestión de entornos. El desafío principal fue manejar la ingesta de archivos Excel masivos con datos inconsistentes. Creé algoritmos de limpieza automática y validación de tipos. Además, Implementé control de acceso granular (RBAC) con ASP.NET Identity y optimicé el rendimiento mediante paginación Server-Side para la gestión fluida de grandes volúmenes de datos.",
+          "image": "/images/Ceva-logo.png",
+          "gallery": [
+              "/images/ceva-dash.png",
+              "/images/ceva-asn.png",
+              "/images/ceva-excel.png"
+          ],
+          "technologies": [".NET 9", "Blazor", "SQL Server", "Clean Arch", "IIS", "EPPlus", "MudBlazor", "EF Core"],
+          "features": ["Ingesta masiva de Excel", "Roles y Permisos (RBAC)", "Auditoría de Logs", "Paginación Server-Side"]
         },
         {
-          "title": "Static Website",
-          "description": "Desarrollo personal universitario de un sitio web estático utilizando HTML, CSS y JavaScript.",
-          "image": "/images/ulp.png",
-          "technologies": ["HTML5", "CSS3", "JavaScript"]
+          "title": "Plataforma de Alquiler P2P",
+          "description": "Mercado digital para el alquiler de vehículos entre particulares. Incluye chat en tiempo real y pagos seguros.",
+          "fullDescription": "Una plataforma completa end-to-end. El foco estuvo en la seguridad (Cookies HttpOnly, protección CSRF) y la experiencia de usuario en tiempo real. Implementé un chat con Socket.IO para que dueños y arrendatarios negocien, y una integración con Mercado Pago para bloquear fondos como garantía. Ademas, diseñé lógica de validación de turnos mediante códigos de seguridad únicos para garantizar la entrega física de los activos.",
+          "image": "/images/Rydox-logo.png",
+          "gallery": [
+              "/images/wms-main.png",
+              "/images/wms-excel.png",
+              "/images/wms-kpi.png"
+          ],
+          "technologies": ["React", "Node.js", "PostgreSQL", "Socket.IO"],
+          "features": ["Chat en tiempo real", "Pagos Mercado Pago", "Auth JWT + HttpOnly", "Validación de turnos"]
         },
-
         {
-          "title": "Axxon Consulting",
-          "description": "Participé en el desarrollo de personalizaciones en Dynamics 365 Finance and Operations utilizando X++. Implementé entidades, formularios, tablas y campos personalizados para los procesos de facturación y gestión de proyectos. Creación y optimización de consultas en SQL Server para informes internos. Colaboré con equipos multidisciplinares para mejorar los flujos operativos de clientes de diferentes sectores.",
+          "title": "Dynamics 365 Finance and Operations",
+          "description": "Personalizaciones en Dynamics 365 Finance and Operations para módulos financieros y de gestión de proyectos.",
+          "fullDescription": "Como parte de Axxon Consulting, participé en el desarrollo de personalizaciones en Dynamics 365 Finance and Operations utilizando X++. Implementé entidades, formularios, tablas y campos personalizados para los procesos de facturación y gestión de proyectos. Creación y optimización de consultas en SQL Server para informes internos. Colaboré con equipos multidisciplinares para mejorar los flujos operativos de clientes de diferentes sectores.",
           "image": "/images/axxon.png",
           "technologies": ["X++", "SQL Server", "Dynamics 365", "Git"]
         },
         {
-          "title": "Student manager",
-          "description": "Desarrollo en .NET Core + EF Core + SQL Server, bajo arquitectura limpia. Aplicación de los principios SOLID y la inyección de dependencias. Implementación completa de CRUD para estudiantes. (Pendiente) Pruebas unitarias con xUnit.",
-          "image": "/images/studentsmanager.png",
-          "link": "https://github.com/Eros23z/Student-Management-.Net",
-          "technologies": ["C#", ".NET", "EF Core", "SQL Server", "Git", "Clean architecture", "SOLID principles", "dependency injection"]
-        },
-        {
-          "title": "Trombosis y trombofilia Argentina",
-          "description": "Desarrollo de sitio web informativo con HTML5, CSS3, JavaScript y Bootstrap. Implementación de diseño adaptable (responsive) y optimización para SEO y rendimiento. Trabajo directo con cliente, entrega de producto funcional utilizado actualmente.",
+          "title": "Trombofilia Argentina",
+          "description": "Sitio web informativo y de contacto para ONG de salud. Optimizado para SEO y accesibilidad.",
+          "fullDescription": "Trabajo directo con el cliente. Se requería un sitio rápido, accesible y con un sistema de contacto seguro sin backend complejo. Integré reCAPTCHA v2 y Formsubmit para gestionar los correos de forma segura y evitar spam.",
           "image": "/images/ong.png",
-          "technologies": ["HTML5", "CSS3", "JavaScript", "Bootstrap", "Git"],
-          "link": "https://trombofiliaytrombosisargentina.netlify.app/"
-        },
-        {
-          "title": "Curriculum Vitae Web",
-          "description": "Desarrollo de mi propio currículum interactivo y dinámico, creado desde cero. Este proyecto muestra mis habilidades en desarrollo front-end, diseño UI/UX y optimización del rendimiento. Cuenta con una navegación fluida, animaciones de desplazamiento y un diseño moderno y adaptable.",
-          "image": "/images/cv.png",
-          "technologies": ["HTML5", "CSS3", "JavaScript", "React.js", "Git"]
+          "link": "https://trombofiliaytrombosisargentina.netlify.app/",
+          "technologies": ["HTML5", "Bootstrap", "JavaScript", "SEO"],
+          "features": ["Diseño Responsive", "Protección Anti-Spam", "Optimización SEO", "Formularios seguros"]
         }
     ],
     "viewProject": "Ver Proyecto"
@@ -145,12 +171,12 @@
     "help": "Puedes preguntar sobre: 'Experiencia', 'Proyectos', 'Habilidades', 'Contacto', 'Tecnologías', 'Futuro', etc.",
     "write": "Por favor, escribe tu pregunta...",
 
-    "experience": "Tengo 2 años de experiencia como desarrollador de software, con un enfoque en React y C# .NET.",
-    "projects": "He trabajado en proyectos destacados como el desarrollo de una página web para una ONG, desarrollo de mi cv web, CRUD con .NET, etc. Puedes verlos en la sección 'Proyectos' de mi CV.",
-    "skills": "Mis habilidades principales son React.js, C#/.NET, y SQL Server. También tengo conocimiento de Node.js, Express, y metodologías ágiles.",
+    "experience": "Tengo una sólida experiencia en .NET, React y arquitectura de software. He trabajado en proyectos de logística y tecnología financiera.",
+    "projects": "He desarrollado sistemas WMS, plataformas de alquiler P2P y API robustas. Consulte la sección Proyectos para obtener más detalles.",
+    "skills": "Domino el ecosistema .NET (C#, Blazor), JavaScript (React, Node) y bases de datos (SQL, Postgres).",
     "salary": "Prefiero discutir el tema salarial durante la entrevista para entender mejor las responsabilidades del puesto.",
     "contact": "Puedes contactarme a través de LinkedIn, GitHub o por email. Encontrarás los enlaces en la parte superior de la página.",
-    "technologies": "Mi stack tecnológico principal incluye React.js, C#/.NET, SQL Server, Node.js y Express. También he trabajado con TypeScript y bases de datos como MongoDB y MySQL.",
+    "technologies": "Mi stack tecnológico principal incluye React.js, C#/.NET, PostgreSQL/SQLServer, Node.js y Express. También he trabajado con TypeScript y bases de datos como MongoDB y MySQL.",
     "github": "Puedes ver mi código y proyectos en mi perfil de GitHub. El enlace está en la parte superior de la página.",
     "why": "Me apasiona resolver problemas y crear productos de software. Soy una persona proactiva y orientada a los resultados.",
     "future": "Busco un puesto que me permita crecer profesionalmente y continuar aprendiendo de un equipo de expertos. Mi objetivo es aplicar mis habilidades para crear soluciones de software innovadoras y escalables, contribuyendo de manera significativa al éxito de la empresa.",

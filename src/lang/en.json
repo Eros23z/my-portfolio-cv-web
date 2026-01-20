@@ -16,9 +16,9 @@
   },
   "about": {
     "title": "ABOUT ME",
-    "paragraph1": "I am a software developer with a solid technical background and experience in creating applications and technological solutions. I am passionate about learning new technologies and contributing in a collaborative environment, always seeking to improve my skills and offer efficient solutions.",
-    "paragraph2": "I have experience in web application development, as well as in implementing customized solutions for clients. I stand out for my ability to solve complex problems and my attention to detail.",
-    "paragraph3": "I consider myself a proactive person with effective communication skills and a strong commitment to quality work. I am always willing to learn and adapt to new technologies and work methodologies.",
+    "paragraph1": "I am a versatile Full-Stack developer with solid experience in both the .NET ecosystem (.NET 9, Blazor) and JavaScript (React, Node.js). I specialize in the architecture of scalable enterprise applications.",
+    "paragraph2": "I have proven ability to build end-to-end applications applying SOLID principles, security, and modern best practices. I excel at solving complex data engineering and performance problems.",
+    "paragraph3": "I consider myself a proactive person with effective communication skills and a strong commitment to quality work.",
     "paragraph4": "Ready to take on new challenges and contribute to innovative projects!",
     "showMore": "Show More",
     "showLess": "Show Less"
@@ -33,7 +33,7 @@
     "toolsVersionControl": "Tools Version Control",
     "methodologies": "Methodologies",
     "conceptsArchitecture": "Concepts Architecture",
-    "platformsERP": "Plataforms / ERP",
+    "platformsERP": "Platforms / ERP",
     "languagesSpoken": "Languages",
     "downloadTitle": "Download my Curriculum Vitae"
   },
@@ -41,18 +41,10 @@
     "title": "Education",
     "institutions": [
       {
-        "institution": "Cristo Rey Educational Institute",
-        "backgroundText": "Collegue",
-        "alignment": "left",
-        "details": [
-        "Humanities and Social Sciences",
-        "Year of graduation: 2016"
-        ]
-      },
-      {
         "institution": "University of La Punta, San Luis",
         "backgroundText": "University",
-        "alignment": "right",
+        "alignment": "center",
+        "logo": "/images/ulp.png",
         "details": [
           "University Technical Degree in Software Development",
           "Start year: 2018",
@@ -63,69 +55,108 @@
   },
   "experience": {
     "title": "Experience",
+    "showDetails": "View details",
+    "hideDetails": "Hide details",
     "jobs": [
       {
-        "company": "Axxon Consulting",
-        "position": "Software Developer",
-        "duration": "Jul 2023 - Feb 2025",
-        "logo": "/images/axxon.png",
+        "company": "Ceva Logistics",
+        "position": ".NET Fullstack Developer (Freelance)",
+        "duration": "Nov 2025 - Dec 2025",
+        "logo": "/images/ceva.png",
+        "technologies": [".NET 9", "Blazor", "SQL Server", "ASP.NET Identity"],
         "responsibilities": [
-          "Solution Developer on Dynamics 365 FO (ERP). X++ for functionality development (forms, tables, entities). I worked with SQL Server for queries and reports. I implemented queries with insert recordset and different types of joins in X++ to extract data from sales transactions and organizational hierarchies. Reduction of errors in advance billing and optimization of expense recording in projects. Resolved performance issues such as SQLExecution Timeout by optimizing filters, join conditions, and report pagination. Contributed to the customization of financial/operational modules, ensuring that billing and customer data loading processes were more efficient."
+            "Enterprise Architecture: Development of a scalable WMS complying with corporate audit standards.",
+            "Data Engineering: Massive Excel ingestion engine with cleaning algorithms and validation.",
+            "Security & Performance: Implementation of granular access control (RBAC) and Server-Side pagination for large data volumes."
         ]
       },
       {
-        "company": "Trombofilia y Trombosis Argentina",
+        "company": "Confidential Project (P2P Rental)",
+        "position": "Full-Stack Developer",
+        "duration": "Sep 2025",
+        "logo": "/images/Rydox-logo.png",
+        "technologies": ["PostgreSQL", "React", "Node.js", "Socket.IO", "Mercado Pago"],
+        "responsibilities": [
+            "Architecture & Security: RESTful API with double token JWT authentication and HttpOnly cookies.",
+            "Real-Time: Live chat with Socket.IO and integrated payment gateway.",
+            "Data Integrity: Shift validation logic using unique security codes."
+        ]
+      },
+      {
+        "company": "Trombosis y Trombofilia Argentina",
         "position": "Freelance Web Developer",
         "duration": "Jul 2025",
         "logo": "/images/ong.png",
-        "responsibilities": "Development and optimization of an interactive contact module, incorporating form validation (HTML5) and anti-spam protection with Google reCAPTCHA v2. Formsubmit.co was integrated as a backendless service for efficient email management, overcoming challenges in configuring redirects and excluding sensitive data from emails."
+        "technologies": ["HTML5", "Bootstrap", "JavaScript", "reCAPTCHA"],
+        "responsibilities": [
+            "Frontend Development: Site construction using HTML5, CSS3, JavaScript, and Bootstrap.",
+            "Security & Contact: Implementation of a contact module with HTML5 validation and anti-spam protection (Google reCAPTCHA v2).",
+            "Backendless Email: Integration of Formsubmit.co for efficient email management, solving redirection and sensitive data privacy challenges."
+        ]
+      },
+      {
+        "company": "Axxon Consulting",
+        "position": "Solution Developer",
+        "duration": "Jul 2023 - Feb 2025",
+        "logo": "/images/axxon.png",
+        "technologies": ["Dynamics 365", "X++", "SQL Server", "Azure Devops"],
+        "responsibilities": [
+            "ERP Development: Customization of Dynamics 365 FO using X++.",
+            "SQL Optimization: Performance improvement in financial reports and complex queries.",
+            "Financial Modules: Implementation of custom entities and forms for billing and project management."
+        ]
       }
     ]
   },
   "projects": {
     "title": "Featured Projects",
+    "viewMore": "View Details",
+    "close": "Close",
     "allProjects": [
         {
-          "title": "Event Organizer",
-          "description": "University personal development for an event organizer with ABM for contacts, clients, and events.",
-          "image": "/images/agenda.png",
-          "technologies": ["C#"]
+          "title": "WMS - International Logistics Management",
+          "description": "Custom-developed Warehouse Management System. Focused on high-performance bulk data entry and stock control.",
+          "fullDescription": "I developed a scalable WMS using the latest .NET 9. from design to configuration and deployment in production on IIS, ensuring high availability and environment management. The main challenge was handling the ingestion of massive Excel files with inconsistent data. I created automatic cleaning and type validation algorithms. In addition, I implemented granular access control (RBAC) with ASP.NET Identity and optimized performance using server-side pagination for smooth management of large volumes of data.",
+          "image": "/images/Ceva-logo.png",
+          "gallery": [
+              "/images/ceva-dash.png",
+              "/images/ceva-asn.png",
+              "/images/ceva-excel.png"
+          ],
+          "technologies": [".NET 9", "Blazor", "SQL Server", "Clean Arch", "IIS", "EPPlus", "MudBlazor", "EF Core"],
+          "features": ["Massive Excel Ingestion", "Roles & Permissions (RBAC)", "Log Auditing", "Server-Side Pagination"]
         },
         {
-          "title": "Static Website",
-          "description": "Personal university development of a static website using HTML, CSS, and JavaScript.",
-          "image": "/images/ulp.png",
-          "technologies": ["HTML5", "CSS3", "JavaScript"]
+          "title": "P2P Rental Platform",
+          "description": "Digital marketplace for vehicle rental between individuals. Includes real-time chat and secure payments.",
+          "fullDescription": "A complete end-to-end platform. The focus was on security (HttpOnly cookies, CSRF protection) and real-time user experience. I implemented a chat with Socket.IO for owners and tenants to negotiate, and an integration with Mercado Pago to block funds as collateral. In addition, I designed shift validation logic using unique security codes to ensure the physical delivery of assets.",
+          "image": "/images/Rydox-logo.png",
+          "gallery": [
+              "/images/wms-main.png",
+              "/images/wms-excel.png",
+              "/images/wms-kpi.png"
+          ],
+          "technologies": ["React", "Node.js", "PostgreSQL", "Socket.IO"],
+          "features": ["Real-time Chat", "Mercado Pago Payments", "JWT + HttpOnly Auth", "Shift Validation"]
         },
-
         {
-          "title": "Axxon Consulting",
-          "description": "I participated in the development of customizations in Dynamics 365 Finance and Operations using X++. I implemented custom entities, forms, tables, and fields for billing and project management processes. Creation and optimization of queries in SQL Server for internal reports. I collaborated with multidisciplinary teams to improve operational flows for clients in different sectors.",
+          "title": "Dynamics 365 Finance and Operations",
+          "description": "Customizations in Dynamics 365 Finance and Operations for financial and project management modules.",
+          "fullDescription": "As part of Axxon Consulting, I participated in the development of customizations in Dynamics 365 Finance and Operations using X++. I implemented custom entities, forms, tables, and fields for billing and project management processes. Creation and optimization of queries in SQL Server for internal reports. I collaborated with multidisciplinary teams to improve operational flows for clients in different sectors.",
           "image": "/images/axxon.png",
           "technologies": ["X++", "SQL Server", "Dynamics 365", "Git"]
         },
         {
-          "title": "Student manager",
-          "description": "Development in .NET Core + EF Core + SQL Server, under Clean Architecture. Application of SOLID principles and dependency injection. Implementation of complete CRUD for students. (Pending) Unit testing with xUnit.",
-          "image": "/images/studentsmanager.png",
-          "link": "https://github.com/Eros23z/Student-Management-.Net",
-          "technologies": ["C#", ".NET", "EF Core", "SQL Server", "Git", "Clean architecture", "SOLID principles", "dependency injection"]
-        },
-        {
-          "title": "Trombosis y trombofilia Argentina",
-          "description": "Development of an informational website using HTML5, CSS3, JavaScript, and Bootstrap. Implementation of responsive design and optimization for SEO and performance. Direct work with client, delivery of functional product currently in use.",
+          "title": "Trombofilia Argentina",
+          "description": "Informational and contact website for a health NGO. Optimized for SEO and accessibility.",
+          "fullDescription": "Direct work with the client. A fast, accessible site with a secure contact system without complex backend was required. I integrated reCAPTCHA v2 and Formsubmit to manage emails securely and avoid spam.",
           "image": "/images/ong.png",
-          "technologies": ["HTML5", "CSS3", "JavaScript", "Bootstrap", "Git"],
-          "link": "https://trombofiliaytrombosisargentina.netlify.app/"
-        },
-        {
-          "title": "Curriculum Vitae Web",
-          "description": "Development of my own interactive and dynamic resume, built from scratch. This project showcases my skills in front-end development, UI/UX design, and performance optimization. It features smooth navigation, scroll animations, and a modern, responsive design.",
-          "image": "/images/cv.png",
-          "technologies": ["HTML5", "CSS3", "JavaScript", "React.js", "Git"]
+          "link": "https://trombofiliaytrombosisargentina.netlify.app/",
+          "technologies": ["HTML5", "Bootstrap", "JavaScript", "SEO"],
+          "features": ["Responsive Design", "Anti-Spam Protection", "SEO Optimization", "Secure Forms"]
         }
     ],
-    "viewProject": "See project"
+    "viewProject": "View Project"
   },
   "navbar": {
     "home": "Home",
@@ -144,13 +175,12 @@
     "presentation": "Hello! I am the Eros chatbot. Do you have any questions about my resume?",
     "help": "You can ask about: 'Experience', 'Projects', 'Skills', 'Contact', 'Technologies', 'Future', etc.",
     "write": "Please write your question below...",
-
-    "experience": "I have two years of experience as a software developer, specializing in React and C# .NET.",
-    "projects": "I have worked on notable projects such as developing a website for an NGO, developing my online resume, CRUD with .NET, etc. You can see them in the ‘Projects’ section of my resume.",
-    "skills": "My main skills are React.js, C#/.NET, and SQL Server. I also have knowledge of Node.js, Express, and agile methodologies.",
+    "experience": "I have solid experience in .NET, React, and Software Architecture. I have worked on logistics and fintech projects.",
+    "projects": "I have developed WMS systems, P2P rental platforms, and robust APIs. Check the Projects section for more details.",
+    "skills": "I master the .NET ecosystem (C#, Blazor), JavaScript (React, Node), and Databases (SQL, Postgres).",
     "salary": "I prefer to discuss salary during the interview so that I can better understand the responsibilities of the position.",
     "contact": "You can contact me via LinkedIn, GitHub, or email. You will find the links at the top of the page.",
-    "technologies": "My main technology stack includes React.js, C#/.NET, SQL Server, Node.js, and Express. I have also worked with TypeScript and databases such as MongoDB and MySQL.",
+    "technologies": "My main technology stack includes React.js, C#/.NET, PostgresSQL/SQL Server, Node.js, and Express. I have also worked with TypeScript and databases such as MongoDB and MySQL.",
     "github": "You can view my code and projects on my GitHub profile. The link is at the top of the page.",
     "why": "I am passionate about solving problems and creating software products. I am a proactive and results-oriented person.",
     "future": "I am looking for a position that will allow me to grow professionally and continue learning from a team of experts. My goal is to apply my skills to create innovative and scalable software solutions, contributing significantly to the success of the company.",

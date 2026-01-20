@@ -3,13 +3,13 @@ import { useLanguage } from '../context/LanguageContext';
 import { RenderIconCloud } from './ui/IconCloud';
 import { motion } from 'framer-motion';
 
-// Lista de tecnologías para la esfera 3D (deben coincidir con simpleicons.org)
+// Lista actualizada de tecnologías para la esfera 3D (basada en tu CV)
 const slugs = [
   "typescript", "javascript", "react", "html5", "css3", "nodedotjs", 
-  "express", "nextdotjs", "prisma", "amazonaws", "postgresql", 
-  "firebase", "vercel", "testinglibrary", "jest", "docker", "git", 
-  "github", "visualstudiocode", "csharp", "dotnet", "microsoftsqlserver", 
-  "mongodb", "bootstrap", "tailwindcss"
+  "express", "postgresql", "prisma", "microsoftsqlserver", "mysql", "mongodb", 
+  "git", "github", "visualstudiocode", "csharp", "dotnet", "blazor", 
+  "bootstrap", "tailwindcss", "postman", "azuredevops", "socketdotio", 
+  "powershell"
 ];
 
 function Skills() {
@@ -34,13 +34,33 @@ function Skills() {
 
       <div className="flex flex-col lg:flex-row items-center justify-between gap-12 w-full max-w-6xl">
           
-          {/* Columna Izquierda: Categorías de Texto */}
+          {/* Columna Izquierda: Categorías de Texto (Actualizadas con tu Stack Real) */}
           <div className="w-full lg:w-1/2 grid grid-cols-1 sm:grid-cols-2 gap-6">
-               <SkillCategory title={text.skills.frontend} items={["React", "HTML5", "CSS3", "Tailwind", "Bootstrap", "JavaScript", "TypeScript"]} delay={0.1} />
-               <SkillCategory title={text.skills.backend} items={["C# .NET", "Node.js", "Express", "EF Core", "Sequelize"]} delay={0.2} />
-               <SkillCategory title={text.skills.databases} items={["SQL Server", "MySQL", "MongoDB", "Oracle"]} delay={0.3} />
-               <SkillCategory title={text.skills.toolsVersionControl} items={["Git", "GitHub", "Visual Studio"]} delay={0.4} />
-               <SkillCategory title={text.skills.methodologies} items={["Agile", "Scrum", "SOLID", "Clean Arch"]} delay={0.5} />
+               <SkillCategory 
+                  title={text.skills.frontend || "Frontend"} 
+                  items={["React.js", "Blazor", "MudBlazor", "HTML5", "CSS3", "Bootstrap", "Tailwind"]} 
+                  delay={0.1} 
+               />
+               <SkillCategory 
+                  title={text.skills.backend || "Backend"} 
+                  items={[".NET 9", "C#", "ASP.NET Core", "Node.js", "Express", "TypeScript", "Prisma ORM"]} 
+                  delay={0.2} 
+               />
+               <SkillCategory 
+                  title={text.skills.databases || "Databases"} 
+                  items={["SQL Server", "PostgreSQL", "MongoDB", "MySQL", "EF Core"]} 
+                  delay={0.3} 
+               />
+               <SkillCategory 
+                  title={text.skills.toolsVersionControl || "Tools"} 
+                  items={["Git", "GitHub", "PowerShell", "Postman", "IIS", "Powershell", "Mercado Pago SDK"]} 
+                  delay={0.4} 
+               />
+               <SkillCategory 
+                  title={text.skills.methodologies || "Architecture"} 
+                  items={["Clean Arch", "SOLID", "Scrum", "REST API", "WebSockets"]} 
+                  delay={0.5} 
+               />
                
                {/* Botón de descarga de CV */}
                <motion.div 
@@ -50,10 +70,10 @@ function Skills() {
                  className="col-span-1 sm:col-span-2 mt-4 flex flex-wrap gap-4 justify-center sm:justify-start"
                >
                  <a href="/CV-Eros.pdf" download className="px-6 py-3 rounded-full bg-primary text-white font-bold hover:bg-primary/80 transition-all shadow-lg hover:shadow-primary/30 flex items-center gap-2">
-                    📄 Descargar CV (Español)
+                     Descargar CV (Español)
                  </a>
                  <a href="/CV_Eros_English.pdf" download className="px-6 py-3 rounded-full bg-card border border-border text-foreground font-bold hover:bg-accent hover:text-white transition-all shadow-lg flex items-center gap-2">
-                    📄 Download CV (English)
+                     Download CV (English)
                  </a>
                </motion.div>
           </div>
