@@ -86,7 +86,7 @@ function Header() {
             </button>
 
             <a 
-                href="/CV-Eros.pdf" 
+                href="/Cv_Eros.pdf" 
                 download
                 className="inline-flex h-12 items-center justify-center rounded-full border border-input bg-background px-8 font-medium shadow-sm transition-colors hover:bg-accent hover:text-accent-foreground"
             >
