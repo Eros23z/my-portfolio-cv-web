@@ -41,3 +41,28 @@
 body {
   @apply bg-background text-foreground transition-colors duration-300 antialiased;
 }
+
+::-webkit-scrollbar {
+  width: 8px; /* Ancho fino y elegante */
+}
+
+::-webkit-scrollbar-track {
+  background: transparent; /* Fondo transparente para que se vea tu web detrás */
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: hsl(var(--muted-foreground) / 0.2); /* Gris muy sutil por defecto */
+  border-radius: 9999px; /* Totalmente redondeado */
+  border: 2px solid transparent; /* Truco para dar margen interno */
+  background-clip: content-box;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: hsl(var(--primary)); /* Se ilumina con tu color principal al interactuar */
+}
+
+/* Para Firefox */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: hsl(var(--muted-foreground) / 0.2) transparent;
+}

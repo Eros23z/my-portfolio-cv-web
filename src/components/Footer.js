@@ -6,7 +6,7 @@ function Footer() {
   const { text } = useLanguage();
 
   return (
-    <footer className="py-8 border-t border-border bg-background text-center">
+    <footer className="w-full py-10 pb-40 md:pb-32 flex flex-col items-center justify-center text-center bg-background border-t border-border/30 relative z-0">
       <div className="max-w-7xl mx-auto px-4">
         <p className="text-foreground font-semibold mb-2">
           © {currentYear} {text.footer.allRightsReserved}

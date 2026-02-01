@@ -123,12 +123,12 @@ function About() {
 
             <div className="relative z-10 flex flex-wrap justify-center gap-3">
                 <CVButton 
-                    href="/Cv_Eros.pdf" 
+                    href="/CV_Eros_ES.pdf" 
                     label="CV Español" 
                     icon={<FileText className="w-4 h-4" />} 
                 />
                 <CVButton 
-                    href="/CV_Eros_English.pdf" 
+                    href="/CV_Eros_EN.pdf" 
                     label="CV English" 
                     icon={<Download className="w-4 h-4" />} 
                     variant="outline"

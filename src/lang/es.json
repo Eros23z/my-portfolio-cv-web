@@ -58,7 +58,7 @@
         "position": "Desarrollo Fullstack .NET (Freelance)",
         "duration": "Nov 2025 - Dic 2025",
         "logo": "/images/ceva.png",
-        "technologies": [".NET 9", "Blazor", "MudBlazor", "EF Core", "IIS", "SQL Server", "ASP.NET Identity"],
+        "technologies": [".NET 9", "Blazor", "MudBlazor", "EF Core", "IIS", "SQL Server", "ASP.NET Identity", "EPPlus", "SonnarQube", "Docker"],
         "responsibilities": [
             "Arquitectura Enterprise: Desarrollo de WMS escalable cumpliendo estándares de auditoría corporativa.",
             "Ingeniería de Datos: Motor de ingesta masiva de Excel con algoritmos de limpieza y validación.",
@@ -111,7 +111,7 @@
         {
           "title": "WMS - Gestión Logística Internacional",
           "description": "Sistema de gestión de almacenes (Warehouse Management System) desarrollado a medida. Enfocado en la ingesta masiva de datos y control de stock con alta performance.",
-          "fullDescription": "Desarrollé un WMS escalable utilizando lo último de .NET 9. desde el diseño hasta la configuración y despliegue en producción sobre IIS, asegurando alta disponibilidad y gestión de entornos. El desafío principal fue manejar la ingesta de archivos Excel masivos con datos inconsistentes. Creé algoritmos de limpieza automática y validación de tipos. Además, Implementé control de acceso granular (RBAC) con ASP.NET Identity y optimicé el rendimiento mediante paginación Server-Side para la gestión fluida de grandes volúmenes de datos.",
+          "fullDescription": "Desarrollé un WMS escalable utilizando lo último de .NET 9. desde el diseño hasta la configuración y despliegue en producción sobre IIS, asegurando alta disponibilidad y gestión de entornos. El desafío principal fue manejar la ingesta de archivos Excel masivos con datos inconsistentes. Creé algoritmos de limpieza automática y validación de tipos. Además, Implementé control de acceso granular (RBAC) con ASP.NET Identity y optimicé el rendimiento mediante paginación Server-Side para la gestión fluida de grandes volúmenes de datos. Implementé un entorno de análisis estático con SonarQube sobre Docker, auditando y corrigiendo vulnerabilidades críticas y Code Smells, elevando el estándar de seguridad y mantenibilidad del proyecto para su pase a producción logrando la máxima calificación de calidad ('A') en Fiabilidad, Seguridad y Mantenibilidad, reduciendo la complejidad cognitiva y eliminando deuda técnica.",
           "image": "/images/Ceva-logo.png",
           "gallery": [
               "/images/ceva-dash.png",

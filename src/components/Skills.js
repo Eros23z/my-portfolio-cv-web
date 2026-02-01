@@ -5,11 +5,40 @@ import { motion } from 'framer-motion';
 
 // Lista actualizada de tecnologías para la esfera 3D (basada en tu CV)
 const slugs = [
-  "typescript", "javascript", "react", "html5", "css3", "nodedotjs", 
-  "express", "postgresql", "prisma", "microsoftsqlserver", "mysql", "mongodb", 
-  "git", "github", "visualstudiocode", "csharp", "dotnet", "blazor", 
-  "bootstrap", "tailwindcss", "postman", "azuredevops", "socketdotio", 
-  "powershell"
+  "csharp",
+  "javascript",
+  "typescript",
+  
+  // Frontend
+  "react",
+  "html5",
+  "css3",
+  "tailwindcss",
+  "bootstrap",
+  "blazor", 
+  
+  // Backend
+  "dotnet",
+  "csharp",
+  "nodedotjs",
+  "express",
+  "prisma",
+  "jsonwebtoken", // JWT
+  
+  // Bases de Datos
+  "postgresql",
+  "microsoftsqlserver",
+  "mysql",
+  
+  // DevOps & Tools
+  "docker",
+  "git",
+  "github",
+  "netlify",
+  "postman",
+  "sonarqube",
+  "windows", // Para representar IIS
+  "socketdotio",
 ];
 
 function Skills() {
@@ -34,46 +63,56 @@ function Skills() {
 
       <div className="flex flex-col lg:flex-row items-center justify-between gap-12 w-full max-w-6xl">
           
-          {/* Columna Izquierda: Categorías de Texto (Actualizadas con tu Stack Real) */}
+          {/* Columna Izquierda: Categorías de Texto (Sincronizadas con tu CV) */}
           <div className="w-full lg:w-1/2 grid grid-cols-1 sm:grid-cols-2 gap-6">
+               
+               {/* Frontend & Lenguajes */}
                <SkillCategory 
-                  title={text.skills.frontend || "Frontend"} 
-                  items={["React.js", "Blazor", "MudBlazor", "HTML5", "CSS3", "Bootstrap", "Tailwind"]} 
+                  title="Front-end & Languages" 
+                  items={["React.js", "Blazor (Server/WASM)", "MudBlazor", "Tailwind CSS", "Bootstrap 5", "TypeScript", "JavaScript", "C#", "HTML5", "CSS3"]} 
                   delay={0.1} 
                />
+
+               {/* Backend & ORM */}
                <SkillCategory 
-                  title={text.skills.backend || "Backend"} 
-                  items={[".NET 9", "C#", "ASP.NET Core", "Node.js", "Express", "TypeScript", "Prisma ORM"]} 
+                  title="Back-end / ORM" 
+                  items={[".NET 9", "ASP.NET Core", "Node.js", "Express.js", "EF Core", "Prisma ORM", "JWT"]} 
                   delay={0.2} 
                />
+
+               {/* Bases de Datos */}
                <SkillCategory 
-                  title={text.skills.databases || "Databases"} 
-                  items={["SQL Server", "PostgreSQL", "MongoDB", "MySQL", "EF Core"]} 
+                  title="Databases" 
+                  items={["PostgreSQL", "SQL Server", "MySQL"]} 
                   delay={0.3} 
                />
+
+               {/* DevOps, Herramientas & Arquitectura */}
                <SkillCategory 
-                  title={text.skills.toolsVersionControl || "Tools"} 
-                  items={["Git", "GitHub", "PowerShell", "Postman", "IIS", "Powershell", "Mercado Pago SDK"]} 
+                  title="DevOps & Architecture" 
+                  items={["Docker", "SonarQube", "Git", "IIS", "Clean Arch", "SOLID", "Design Patterns"]} 
                   delay={0.4} 
                />
+
+               {/* Librerías e Integraciones */}
                <SkillCategory 
-                  title={text.skills.methodologies || "Architecture"} 
-                  items={["Clean Arch", "SOLID", "Scrum", "REST API", "WebSockets"]} 
+                  title="Integrationes & Methodologies" 
+                  items={["Mercado Pago SDK", "Socket.IO", "EPPlus", "Scrum", "Ágil", "APIs RESTful"]} 
                   delay={0.5} 
                />
                
-               {/* Botón de descarga de CV */}
+               {/* Botones de descarga de CV */}
                <motion.div 
                  initial={{ opacity: 0, scale: 0.9 }}
                  whileInView={{ opacity: 1, scale: 1 }}
                  transition={{ delay: 0.6 }}
                  className="col-span-1 sm:col-span-2 mt-4 flex flex-wrap gap-4 justify-center sm:justify-start"
                >
-                 <a href="/CV_Eros.pdf" download className="px-6 py-3 rounded-full bg-primary text-white font-bold hover:bg-primary/80 transition-all shadow-lg hover:shadow-primary/30 flex items-center gap-2">
-                     Descargar CV (Español)
+                 <a href="/CV_Eros_ES.pdf" download className="px-6 py-3 rounded-full bg-primary text-white font-bold hover:bg-primary/80 transition-all shadow-lg hover:shadow-primary/30 flex items-center gap-2">
+                    📄 Descargar CV (Español)
                  </a>
-                 <a href="/CV_Eros_English.pdf" download className="px-6 py-3 rounded-full bg-card border border-border text-foreground font-bold hover:bg-accent hover:text-white transition-all shadow-lg flex items-center gap-2">
-                     Download CV (English)
+                 <a href="/CV_Eros_EN.pdf" download className="px-6 py-3 rounded-full bg-card border border-border text-foreground font-bold hover:bg-accent hover:text-white transition-all shadow-lg flex items-center gap-2">
+                    📄 Download CV (English)
                  </a>
                </motion.div>
           </div>
