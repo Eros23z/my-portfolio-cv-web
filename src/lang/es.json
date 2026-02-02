@@ -118,7 +118,7 @@
               "/images/ceva-asn.png",
               "/images/ceva-excel.png"
           ],
-          "technologies": [".NET 9", "Blazor", "SQL Server", "Clean Arch", "IIS", "EPPlus", "MudBlazor", "EF Core"],
+          "technologies": [".NET 9", "Blazor", "SQL Server", "Clean Arch", "IIS", "EPPlus", "MudBlazor", "EF Core", "SonnarQube", "Docker"],
           "features": ["Ingesta masiva de Excel", "Roles y Permisos (RBAC)", "Auditoría de Logs", "Paginación Server-Side"]
         },
         {
@@ -144,7 +144,7 @@
         {
           "title": "Trombofilia Argentina",
           "description": "Sitio web informativo y de contacto para ONG de salud. Optimizado para SEO y accesibilidad.",
-          "fullDescription": "Trabajo directo con el cliente. Se requería un sitio rápido, accesible y con un sistema de contacto seguro sin backend complejo. Integré reCAPTCHA v2 y Formsubmit para gestionar los correos de forma segura y evitar spam.",
+          "fullDescription": "Trabajo directo con el cliente. Desarrollé un sitio estático ultra-ligero optimizado para SEO y accesibilidad. Integré Formsubmit con reCAPTCHA v2 para manejar correos de forma segura sin backend, evitando spam y protegiendo datos sensibles.",
           "image": "/images/ong.png",
           "link": "https://trombofiliaytrombosisargentina.netlify.app/",
           "technologies": ["HTML5", "Bootstrap", "JavaScript", "SEO"],

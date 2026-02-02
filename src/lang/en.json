@@ -123,7 +123,7 @@
               "/images/ceva-asn.png",
               "/images/ceva-excel.png"
           ],
-          "technologies": [".NET 9", "Blazor", "SQL Server", "Clean Arch", "IIS", "EPPlus", "MudBlazor", "EF Core"],
+          "technologies": [".NET 9", "Blazor", "SQL Server", "Clean Arch", "IIS", "EPPlus", "MudBlazor", "EF Core", "SonnarQube", "Docker"],
           "features": ["Massive Excel Ingestion", "Roles & Permissions (RBAC)", "Log Auditing", "Server-Side Pagination"]
         },
         {
@@ -149,7 +149,7 @@
         {
           "title": "Trombofilia Argentina",
           "description": "Informational and contact website for a health NGO. Optimized for SEO and accessibility.",
-          "fullDescription": "Direct work with the client. A fast, accessible site with a secure contact system without complex backend was required. I integrated reCAPTCHA v2 and Formsubmit to manage emails securely and avoid spam.",
+          "fullDescription": "Direct work with the client. I developed an ultra-lightweight static website optimized for SEO and accessibility. I integrated Formsubmit with reCAPTCHA v2 to securely handle emails without a backend, preventing spam and protecting sensitive data.",
           "image": "/images/ong.png",
           "link": "https://trombofiliaytrombosisargentina.netlify.app/",
           "technologies": ["HTML5", "Bootstrap", "JavaScript", "SEO"],

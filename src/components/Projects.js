@@ -11,7 +11,7 @@ function Projects() {
   return (
     <section id="projects" className="py-32 bg-background relative overflow-hidden">
       {/* Fondo decorativo sutil */}
-      <div className="absolute top-0 left-0 w-full h-full pointer-events-none" />
+      <div className="absolute top-0 left-0 w-full h-full bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] bg-[size:24px_24px] [mask-image:radial-gradient(ellipse_60%_50%_at_50%_0%,#000_70%,transparent_100%)] pointer-events-none" />
 
       <div className="max-w-7xl mx-auto px-6 relative z-10">
         
@@ -31,7 +31,7 @@ function Projects() {
           </h2>
         </motion.div>
 
-        {/* LISTA ZIG-ZAG (DISEÑO RESTAURADO) */}
+        {/* LISTA ZIG-ZAG */}
         <div className="flex flex-col gap-24 md:gap-32">
           {projectsData.map((project, index) => (
             <ProjectItem 
@@ -45,7 +45,7 @@ function Projects() {
         </div>
       </div>
 
-      {/* --- MODAL DETALLADO (SIN CAMBIOS) --- */}
+      {/* --- MODAL DETALLADO (REDISEÑADO) --- */}
       <AnimatePresence>
         {selectedProject && (
           <ProjectModal 
@@ -72,7 +72,7 @@ const ProjectItem = ({ project, index, onClick, text }) => {
       transition={{ duration: 0.7, ease: "easeOut" }}
       className={`flex flex-col ${isEven ? 'lg:flex-row' : 'lg:flex-row-reverse'} items-center gap-8 lg:gap-16 group`}
     >
-      {/* 1. MOCKUP DE IMAGEN (Ventana de navegador) - CLICKABLE */}
+      {/* 1. MOCKUP DE IMAGEN - CLICKABLE */}
       <div 
         className="w-full lg:w-3/5 cursor-pointer perspective-1000"
         onClick={onClick}
@@ -147,7 +147,7 @@ const ProjectItem = ({ project, index, onClick, text }) => {
   );
 };
 
-// --- MODAL COMPLETO (INTACTO, CON CARRUSEL) ---
+// --- MODAL COMPLETO (REDISEÑADO PREMIUM/MINIMALISTA) ---
 const ProjectModal = ({ project, onClose, text }) => {
     const [currentImageIndex, setCurrentImageIndex] = useState(0);
     const images = project.gallery && project.gallery.length > 0 ? project.gallery : [project.image];
@@ -166,89 +166,118 @@ const ProjectModal = ({ project, onClose, text }) => {
         <div className="fixed inset-0 z-[100] flex items-center justify-center p-4 sm:p-6">
             <motion.div 
                 initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }}
-                onClick={onClose} className="absolute inset-0 bg-black/60 backdrop-blur-sm"
+                onClick={onClose} className="absolute inset-0 bg-black/60 backdrop-blur-md"
             />
             
             <motion.div 
                 layoutId={`project-${project.title}`}
-                initial={{ opacity: 0, scale: 0.9, y: 20 }} animate={{ opacity: 1, scale: 1, y: 0 }} exit={{ opacity: 0, scale: 0.9, y: 20 }}
-                className="relative w-full max-w-4xl bg-card border border-border rounded-3xl shadow-2xl overflow-hidden max-h-[90vh] flex flex-col"
+                initial={{ opacity: 0, scale: 0.95, y: 20 }} animate={{ opacity: 1, scale: 1, y: 0 }} exit={{ opacity: 0, scale: 0.95, y: 20 }}
+                className="relative w-full max-w-5xl bg-card border border-border rounded-[2rem] shadow-2xl overflow-hidden max-h-[90vh] flex flex-col"
             >
-                <button onClick={onClose} className="absolute top-4 right-4 z-50 p-2 bg-black/50 text-white rounded-full hover:bg-red-500 transition-colors">
-                    <X className="w-5 h-5" />
+                {/* Botón Cerrar (Más grande y claro) */}
+                <button onClick={onClose} className="absolute top-6 right-6 z-50 p-2.5 bg-black/20 text-white backdrop-blur-md rounded-full hover:bg-red-500/80 transition-all">
+                    <X className="w-6 h-6" />
                 </button>
 
-                <div className="overflow-y-auto custom-scrollbar">
-                    <div className="relative h-64 md:h-96 w-full bg-black group">
+                <div className="overflow-y-auto custom-scrollbar flex-1 bg-background/50">
+                    
+                    {/* --- SECCIÓN 1: CARRUSEL DE IMAGENES (Limpio, sin título encima) --- */}
+                    <div className="relative w-full aspect-video bg-black group">
                         <AnimatePresence mode="wait">
                             <motion.img 
                                 key={currentImageIndex} src={images[currentImageIndex]} 
                                 initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }}
-                                transition={{ duration: 0.3 }} className="w-full h-full object-contain" 
+                                transition={{ duration: 0.4 }} className="w-full h-full object-contain bg-center" 
                             />
                         </AnimatePresence>
-                        <div className="absolute inset-0 bg-gradient-to-t from-card via-transparent to-transparent pointer-events-none" />
-                        <div className="absolute bottom-6 left-6 md:left-10 z-10 pointer-events-none">
-                            <h2 className="text-3xl md:text-5xl font-bold text-foreground drop-shadow-xl shadow-black">{project.title}</h2>
-                        </div>
+                        
+                        {/* Controles Carrusel */}
                         {images.length > 1 && (
                             <>
-                                <button onClick={prevImage} className="absolute left-4 top-1/2 -translate-y-1/2 p-2 rounded-full bg-black/50 text-white hover:bg-white hover:text-black transition-all opacity-0 group-hover:opacity-100">
+                                <button onClick={prevImage} className="absolute left-6 top-1/2 -translate-y-1/2 p-3 rounded-full bg-black/30 backdrop-blur-md text-white hover:bg-white hover:text-black transition-all opacity-0 group-hover:opacity-100">
                                     <ChevronLeft className="w-6 h-6" />
                                 </button>
-                                <button onClick={nextImage} className="absolute right-4 top-1/2 -translate-y-1/2 p-2 rounded-full bg-black/50 text-white hover:bg-white hover:text-black transition-all opacity-0 group-hover:opacity-100">
+                                <button onClick={nextImage} className="absolute right-6 top-1/2 -translate-y-1/2 p-3 rounded-full bg-black/30 backdrop-blur-md text-white hover:bg-white hover:text-black transition-all opacity-0 group-hover:opacity-100">
                                     <ChevronRight className="w-6 h-6" />
                                 </button>
-                                <div className="absolute bottom-4 left-1/2 -translate-x-1/2 flex gap-2 z-20">
+                                {/* Indicadores */}
+                                <div className="absolute bottom-6 left-1/2 -translate-x-1/2 flex gap-2 z-20 p-2 rounded-full bg-black/20 backdrop-blur-md">
                                     {images.map((_, idx) => (
-                                        <div key={idx} className={`w-2 h-2 rounded-full transition-all ${idx === currentImageIndex ? 'bg-white w-4' : 'bg-white/50'}`} />
+                                        <div key={idx} className={`w-2 h-2 rounded-full transition-all ${idx === currentImageIndex ? 'bg-white w-5' : 'bg-white/50'}`} />
                                     ))}
                                 </div>
                             </>
                         )}
                     </div>
 
-                    <div className="p-6 md:p-10 grid grid-cols-1 md:grid-cols-3 gap-10">
-                        <div className="md:col-span-2 space-y-6">
-                            <div>
-                                <h3 className="text-xl font-bold text-primary mb-3">About the Project</h3>
-                                <p className="text-muted-foreground leading-relaxed text-lg">{project.fullDescription || project.description}</p>
-                            </div>
-                            {project.features && (
-                                <div>
-                                    <h3 className="text-lg font-bold text-foreground mb-3">Key Features</h3>
-                                    <ul className="grid grid-cols-1 sm:grid-cols-2 gap-3">
-                                        {project.features.map((feature, i) => (
-                                            <li key={i} className="flex items-start gap-2 text-sm text-muted-foreground">
-                                                <Check className="w-4 h-4 text-green-500 mt-0.5" />
-                                                {feature}
-                                            </li>
-                                        ))}
-                                    </ul>
-                                </div>
-                            )}
+                    {/* --- SECCIÓN 2: CONTENIDO (Con mucho espaciado) --- */}
+                    <div className="p-8 md:p-12 lg:p-16 space-y-12">
+
+                        {/* CABECERA: Título y Tecnologías */}
+                        <div className="space-y-6 border-b border-border/50 pb-10">
+                             <h2 className="text-4xl md:text-5xl font-extrabold text-foreground tracking-tight">{project.title}</h2>
+                             
+                             {/* Tecnologías (Movidas aquí arriba para dar contexto inmediato) */}
+                             <div className="flex flex-wrap gap-3">
+                                {project.technologies.map((tech, i) => (
+                                    <span key={i} className="px-4 py-2 text-sm font-semibold rounded-xl bg-primary/10 text-primary border border-primary/20 flex items-center gap-2">
+                                        <Code2 className="w-4 h-4" /> {tech}
+                                    </span>
+                                ))}
+                             </div>
                         </div>
-                        <div className="space-y-6">
-                             <div className="bg-secondary/30 p-5 rounded-2xl border border-border">
-                                <h4 className="font-bold text-sm uppercase text-muted-foreground mb-4">Technologies</h4>
-                                <div className="flex flex-wrap gap-2">
-                                    {project.technologies.map((tech, i) => (
-                                        <span key={i} className="px-3 py-1 text-xs font-semibold rounded-full bg-primary/10 text-primary border border-primary/20">{tech}</span>
-                                    ))}
+
+                        {/* GRID DE DETALLES (2 columnas con mucho aire) */}
+                        <div className="grid grid-cols-1 lg:grid-cols-3 gap-12 lg:gap-20 items-start">
+                            
+                            {/* COLUMNA PRINCIPAL (Descripción y Features) */}
+                            <div className="lg:col-span-2 space-y-12">
+                                
+                                {/* About */}
+                                <div>
+                                    <h3 className="text-xl font-bold text-foreground mb-4 flex items-center gap-2">
+                                        <Layers className="w-5 h-5 text-primary" /> About the Project
+                                    </h3>
+                                    <p className="text-muted-foreground leading-relaxed text-lg">{project.fullDescription || project.description}</p>
                                 </div>
-                             </div>
-                             <div className="flex flex-col gap-3">
-                                {project.link && (
-                                    <a href={project.link} target="_blank" rel="noopener noreferrer" className="flex items-center justify-center gap-2 w-full py-3 rounded-xl bg-primary text-primary-foreground font-bold hover:bg-primary/90 transition-all shadow-lg">
-                                        Visit Live Site <ExternalLink className="w-4 h-4" />
-                                    </a>
+                                
+                                {/* Features (En grid para que respire mejor) */}
+                                {project.features && (
+                                    <div>
+                                        <h3 className="text-xl font-bold text-foreground mb-6 flex items-center gap-2">
+                                            <Check className="w-5 h-5 text-primary" /> Key Features
+                                        </h3>
+                                        <ul className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                                            {project.features.map((feature, i) => (
+                                                <li key={i} className="flex items-start gap-3 p-4 rounded-xl bg-secondary/30 border border-border/50 text-foreground/90">
+                                                    <Check className="w-5 h-5 text-green-500 mt-0.5 shrink-0" />
+                                                    <span className="text-base font-medium leading-snug">{feature}</span>
+                                                </li>
+                                            ))}
+                                        </ul>
+                                    </div>
                                 )}
-                                {project.githubLink && (
-                                    <a href={project.githubLink} target="_blank" rel="noopener noreferrer" className="flex items-center justify-center gap-2 w-full py-3 rounded-xl bg-secondary text-secondary-foreground font-bold border border-border hover:bg-secondary/80 transition-all">
-                                        View Code <Github className="w-4 h-4" />
-                                    </a>
-                                )}
-                             </div>
+                            </div>
+
+                            {/* COLUMNA LATERAL (Links y CTA) - Sticky */}
+                            <div className="space-y-8 lg:sticky lg:top-6">
+                                 <div className="p-6 rounded-3xl bg-secondary/20 border border-border/50 space-y-6">
+                                    <h4 className="font-bold text-sm uppercase text-muted-foreground tracking-wider mb-2">Project Links</h4>
+                                    <div className="flex flex-col gap-4">
+                                        {project.link && (
+                                            <a href={project.link} target="_blank" rel="noopener noreferrer" className="group flex items-center justify-center gap-3 w-full py-4 rounded-2xl bg-primary text-primary-foreground font-bold hover:bg-primary/90 transition-all shadow-lg shadow-primary/20 hover:scale-[1.02]">
+                                                Visit Live Site <ExternalLink className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+                                            </a>
+                                        )}
+                                        {project.githubLink && (
+                                            <a href={project.githubLink} target="_blank" rel="noopener noreferrer" className="group flex items-center justify-center gap-3 w-full py-4 rounded-2xl bg-card text-foreground font-bold border border-border/80 hover:bg-secondary/50 hover:border-primary/30 transition-all hover:scale-[1.02]">
+                                                View Code <Github className="w-5 h-5 group-hover:rotate-12 transition-transform" />
+                                            </a>
+                                        )}
+                                     </div>
+                                 </div>
+                            </div>
+
                         </div>
                     </div>
                 </div>
