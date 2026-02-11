@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { useLanguage } from '../context/LanguageContext';
-import { ExternalLink, Code2, Layers, X, Github, Check, ChevronLeft, ChevronRight, Plus } from 'lucide-react';
+import { ExternalLink, Code2, Layers, X, Github, Check, ChevronLeft, ChevronRight, Plus, Sparkles } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
 
 function Projects() {
@@ -152,6 +152,10 @@ const ProjectModal = ({ project, onClose, text }) => {
     const [currentImageIndex, setCurrentImageIndex] = useState(0);
     const images = project.gallery && project.gallery.length > 0 ? project.gallery : [project.image];
 
+    const descriptions = Array.isArray(project.fullDescriptions) 
+        ? project.fullDescriptions 
+        : [project.fullDescriptions || project.descriptions];
+
     const nextImage = (e) => {
         e.stopPropagation();
         setCurrentImageIndex((prev) => (prev + 1) % images.length);
@@ -235,10 +239,30 @@ const ProjectModal = ({ project, onClose, text }) => {
                                 
                                 {/* About */}
                                 <div>
-                                    <h3 className="text-xl font-bold text-foreground mb-4 flex items-center gap-2">
-                                        <Layers className="w-5 h-5 text-primary" /> About the Project
+                                    <h3 className="text-xl font-bold text-foreground mb-6 flex items-center gap-2">
+                                        <Sparkles className="w-5 h-5 text-primary" /> About the Project
                                     </h3>
-                                    <p className="text-muted-foreground leading-relaxed text-lg">{project.fullDescription || project.description}</p>
+                                    
+                                    {/* Renderizado de la lista de descripciones */}
+                                    <div className="space-y-6">
+                                        {descriptions.map((desc, i) => (
+                                            <motion.div 
+                                                key={i}
+                                                initial={{ opacity: 0, x: -10 }}
+                                                animate={{ opacity: 1, x: 0 }}
+                                                transition={{ delay: i * 0.1 }}
+                                                className="flex items-start gap-4 p-4 rounded-2xl bg-card border border-border/40 hover:border-primary/20 transition-colors"
+                                            >
+                                                {/* Número o Icono elegante */}
+                                                <div className="flex-shrink-0 w-8 h-8 rounded-full bg-secondary flex items-center justify-center text-primary font-bold text-sm border border-border">
+                                                    {i + 1}
+                                                </div>
+                                                <p className="text-muted-foreground leading-relaxed text-base md:text-lg">
+                                                    {desc}
+                                                </p>
+                                            </motion.div>
+                                        ))}
+                                    </div>
                                 </div>
                                 
                                 {/* Features (En grid para que respire mejor) */}

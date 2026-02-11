@@ -49,14 +49,26 @@
     ]
   },
   "experience": {
-    "title": "Experiencia",
-    "showDetails": "Ver detalles",
+    "title": "Trayectoria Profesional",
+    "showDetails": "Ver responsabilidades",
     "hideDetails": "Ocultar detalles",
     "jobs": [
       {
+        "company": "Lesous",
+        "position": "Desarrollo Fullstack Next.js (Freelance)",
+        "duration": "Nov 2025 - Dic 2025",
+        "logo": "/images/Lesous.png",
+        "technologies": ["Next.js 16", "Prisma ORM 7", "React.js", "PostgreSQL", "Supabase", "Tailwind CSS", "Framer Motion"],
+        "responsibilities": [
+            "Arquitectura Cloud-Native: Diseñé y optimicé el esquema de base de datos PostgreSQL con Prisma ORM alojada en Supabase, implementando políticas de seguridad a nivel de fila (RLS)",
+            "Desarrollé un panel de administración (CMS) seguro con autenticación robusta y gestión de medios en la nube (Storage), mejorando la eficiencia operativa del cliente para la gestión de inventario.",
+            "Admin Dashboard: Panel de gestión de inventario CRUD con subida de imágenes en tiempo real y validaciones."
+        ]
+      },
+      {
         "company": "Ceva Logistics",
         "position": "Desarrollo Fullstack .NET (Freelance)",
-        "duration": "Nov 2025 - Dic 2025",
+        "duration": "Ene 2026 - Feb 2026",
         "logo": "/images/ceva.png",
         "technologies": [".NET 9", "Blazor", "MudBlazor", "EF Core", "IIS", "SQL Server", "ASP.NET Identity", "EPPlus", "SonnarQube", "Docker"],
         "responsibilities": [
@@ -109,9 +121,36 @@
     "close": "Cerrar",
     "allProjects": [
         {
+          "title": "Lesous - E-commerce",
+          "description": "Desarrollo Full Stack de una plataforma e-commerce con una estética inmersiva y una arquitectura serverless escalable. Enfocado en la experiencia de usuario y la seguridad de datos.",
+          "fullDescriptions": [
+              "Desarrollé una plataforma e-commerce con una estética inmersiva requerida por el cliente; Se basó en el ambiente y la representación de la tienda (como la magia, lo místico y lo oscuro).",
+              "El diseño se centró en la experiencia de usuario, utilizando Tailwind CSS para lograr una interfaz atractiva y responsiva. Implementé animaciones con Framer Motion para mejorar la interacción y la fluidez del sitio.",
+              "Diseñé la página de principio a fin, que va desde el diseño y modelado del esquema de la base de datos utilizando Next.js 16 y Prisma ORM 7 para la gestión de datos en PostgreSQL alojada en Supabase.",
+              "Implementé políticas de seguridad a nivel de fila (RLS), configuración de políticas SQL granulares: Lectura pública para visitantes, escritura restringida para administradores autenticados en Supabase.",
+              "Desarrollé un panel de administración (CMS) seguro con autenticación robusta (Supabase Auth) y gestión de medios en la nube (Storage), mejorando la eficiencia operativa del cliente para la gestión de inventario. El CMS permite a los administradores gestionar productos, categorías, pedidos y clientes de manera eficiente, con una interfaz intuitiva y segura.",
+              "Configuré flujos de integración y despliegue continuo (CI/CD) en Vercel, resolviendo desafíos de despliegue relacionados con variables de entorno y de compilación TypeScript y connection pooling de base de datos."
+          ],
+          "image": "/images/Lesous-web.png",
+          "link": "https://lesous-ecommerce.vercel.app",
+          "gallery": [
+              "/images/Lesous-web.png",
+              "/images/lesous-grimorio.png",
+              "/images/lesous-login.png",
+              "/images/lesous-dashboard.png"
+          ],
+          "technologies": ["Next.js 16", "PostgreSQL", "Prisma ORM 7", "React.js", "Framer Motion", "Tailwind CSS", "Supabase", "Vercel"],
+          "features": ["Panel de Administración (CMS)", "Animaciones con Framer Motion", "Seguridad con RLS y Supabase Auth", "Despliegue CI/CD en Vercel", "Gestión de Medios en la Nube"]
+        },
+        {
           "title": "WMS - Gestión Logística Internacional",
           "description": "Sistema de gestión de almacenes (Warehouse Management System) desarrollado a medida. Enfocado en la ingesta masiva de datos y control de stock con alta performance.",
-          "fullDescription": "Desarrollé un WMS escalable utilizando lo último de .NET 9. desde el diseño hasta la configuración y despliegue en producción sobre IIS, asegurando alta disponibilidad y gestión de entornos. El desafío principal fue manejar la ingesta de archivos Excel masivos con datos inconsistentes. Creé algoritmos de limpieza automática y validación de tipos. Además, Implementé control de acceso granular (RBAC) con ASP.NET Identity y optimicé el rendimiento mediante paginación Server-Side para la gestión fluida de grandes volúmenes de datos. Implementé un entorno de análisis estático con SonarQube sobre Docker, auditando y corrigiendo vulnerabilidades críticas y Code Smells, elevando el estándar de seguridad y mantenibilidad del proyecto para su pase a producción logrando la máxima calificación de calidad ('A') en Fiabilidad, Seguridad y Mantenibilidad, reduciendo la complejidad cognitiva y eliminando deuda técnica.",
+          "fullDescriptions":[
+              "Desarrollé un WMS escalable utilizando lo último de .NET 9. desde el diseño hasta la configuración y despliegue en producción sobre IIS, asegurando alta disponibilidad y gestión de entornos.",
+              "El desafío principal fue manejar la ingesta de archivos Excel masivos con datos inconsistentes. Creé algoritmos de limpieza automática y validación de tipos. Además, Implementé control de acceso granular (RBAC) con ASP.NET Identity y optimicé el rendimiento mediante paginación Server-Side para la gestión fluida de grandes volúmenes de datos.",
+              "Implementé un entorno de análisis estático con SonarQube sobre Docker, auditando y corrigiendo vulnerabilidades críticas y Code Smells, elevando el estándar de seguridad y mantenibilidad del proyecto para su pase a producción logrando la máxima calificación de calidad ('A') en Fiabilidad, Seguridad y Mantenibilidad, reduciendo la complejidad cognitiva y eliminando deuda técnica.",
+              "El resultado fue un sistema robusto y eficiente que mejoró significativamente la gestión de inventarios y operaciones logísticas del cliente, con una interfaz intuitiva y un backend optimizado para el rendimiento."
+          ],
           "image": "/images/Ceva-logo.png",
           "gallery": [
               "/images/ceva-dash.png",
@@ -124,7 +163,12 @@
         {
           "title": "Plataforma de Alquiler P2P",
           "description": "Mercado digital para el alquiler de vehículos entre particulares. Incluye chat en tiempo real y pagos seguros.",
-          "fullDescription": "Una plataforma completa end-to-end. El foco estuvo en la seguridad (Cookies HttpOnly, protección CSRF) y la experiencia de usuario en tiempo real. Implementé un chat con Socket.IO para que dueños y arrendatarios negocien, y una integración con Mercado Pago para bloquear fondos como garantía. Ademas, diseñé lógica de validación de turnos mediante códigos de seguridad únicos para garantizar la entrega física de los activos.",
+          "fullDescriptions": [
+              "Una plataforma completa end-to-end. El foco estuvo en la seguridad (Cookies HttpOnly, protección CSRF) y la experiencia de usuario en tiempo real.",
+              "Implementé un chat con Socket.IO para que dueños y arrendatarios negocien, y una integración con Mercado Pago para bloquear fondos como garantía.",
+              "Diseñé lógica de validación de turnos mediante códigos de seguridad únicos para garantizar la entrega física de los activos.",
+              "El desarrollo se realizó con una arquitectura RESTful utilizando Node.js y Express en el backend, con React.js en el frontend y PostgreSQL como base de datos, asegurando una experiencia fluida y segura para los usuarios."
+          ],
           "image": "/images/Rydox-logo.png",
           "gallery": [
               "/images/wms-main.png",
@@ -137,16 +181,29 @@
         {
           "title": "Dynamics 365 Finance and Operations",
           "description": "Personalizaciones en Dynamics 365 Finance and Operations para módulos financieros y de gestión de proyectos.",
-          "fullDescription": "Como parte de Axxon Consulting, participé en el desarrollo de personalizaciones en Dynamics 365 Finance and Operations utilizando X++. Implementé entidades, formularios, tablas y campos personalizados para los procesos de facturación y gestión de proyectos. Creación y optimización de consultas en SQL Server para informes internos. Colaboré con equipos multidisciplinares para mejorar los flujos operativos de clientes de diferentes sectores.",
+          "fullDescriptions":[
+              "Como parte de Axxon Consulting, participé en el desarrollo de personalizaciones en Dynamics 365 Finance and Operations utilizando X++.",
+              "Implementé entidades, formularios, tablas y campos personalizados para los procesos de facturación y gestión de proyectos. Creación y optimización de consultas en SQL Server para informes internos.",
+              "Colaboré con equipos multidisciplinares para mejorar los flujos operativos de clientes de diferentes sectores."
+          ],
           "image": "/images/axxon.png",
           "technologies": ["X++", "SQL Server", "Dynamics 365", "Git"]
         },
         {
           "title": "Trombofilia Argentina",
           "description": "Sitio web informativo y de contacto para ONG de salud. Optimizado para SEO y accesibilidad.",
-          "fullDescription": "Trabajo directo con el cliente. Desarrollé un sitio estático ultra-ligero optimizado para SEO y accesibilidad. Integré Formsubmit con reCAPTCHA v2 para manejar correos de forma segura sin backend, evitando spam y protegiendo datos sensibles.",
+          "fullDescriptions":[
+              "Trabajo directo con el cliente. Desarrollé un sitio estático ultra-ligero optimizado para SEO y accesibilidad.",
+              "Integré Formsubmit con reCAPTCHA v2 para manejar correos de forma segura sin backend, evitando spam y protegiendo datos sensibles.",
+              "El resultado fue un sitio web profesional y funcional que cumple con los objetivos del cliente, con un diseño responsive y una experiencia de usuario optimizada."
+          ],
           "image": "/images/ong.png",
           "link": "https://trombofiliaytrombosisargentina.netlify.app/",
+          "gallery": [
+              "/images/ong-main.png",
+              "/images/ong-form.png",
+              "/images/ong-seo.png"
+          ],
           "technologies": ["HTML5", "Bootstrap", "JavaScript", "SEO"],
           "features": ["Diseño Responsive", "Protección Anti-Spam", "Optimización SEO", "Formularios seguros"]
         }

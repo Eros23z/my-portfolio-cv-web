@@ -54,10 +54,22 @@
     ]
   },
   "experience": {
-    "title": "Experience",
-    "showDetails": "View details",
+    "title": "career path",
+    "showDetails": "See responsibilities",
     "hideDetails": "Hide details",
     "jobs": [
+      {
+        "company": "Lesous",
+        "position": "Fullstack Developer Next.js (Freelance)",
+        "duration": "Nov 2025 - Dec 2025",
+        "logo": "/images/Lesous.png",
+        "technologies": ["Next.js 16", "Prisma ORM 7", "React.js", "PostgreSQL", "Supabase", "Tailwind CSS", "Framer Motion"],
+        "responsibilities": [
+            "Cloud-Native Architecture: I designed and optimized the PostgreSQL database schema with Prisma ORM hosted on Supabase, implementing row-level security (RLS) policies.",
+            "I developed a secure administration panel (CMS) with robust authentication and cloud media management (Storage), improving the client's operational efficiency for inventory management.",
+            "Admin Dashboard: CRUD inventory management panel with real-time image uploads and validations."
+        ]
+      },
       {
         "company": "Ceva Logistics",
         "position": ".NET Fullstack Developer (Freelance)",
@@ -113,10 +125,37 @@
     "viewMore": "View Details",
     "close": "Close",
     "allProjects": [
+      {
+          "title": "Lesous - E-commerce",
+          "description": "Full stack development of an e-commerce platform with immersive aesthetics and scalable serverless architecture. Focused on user experience and data security.",
+          "fullDescriptions": [
+              "I developed an e-commerce platform with an immersive aesthetic as requested by the client; it was based on the atmosphere and representation of the store (such as magic, mysticism, and darkness).",
+              "The design focused on user experience, using Tailwind CSS to achieve an attractive and responsive interface. I implemented animations with Framer Motion to improve the interaction and fluidity of the site.",
+              "I designed the page from start to finish, ranging from the design and modeling of the database schema using Next.js 16 and Prisma ORM 7 for data management in PostgreSQL hosted on Supabase.",
+              "I implemented row-level security (RLS) policies and granular SQL policy settings: public read access for visitors, restricted write access for authenticated administrators in Supabase.",
+              "I developed a secure administration panel (CMS) with robust authentication (Supabase Auth) and cloud media management (Storage), improving the client's operational efficiency for inventory management. The CMS allows administrators to manage products, categories, orders, and customers efficiently, with an intuitive and secure interface.",
+              "I set up continuous integration and deployment (CI/CD) flows in Vercel, solving deployment challenges related to environment variables, TypeScript compilation variables, and database connection pooling."
+          ],
+          "image": "/images/Lesous-web.png",
+          "link": "https://lesous-ecommerce.vercel.app",
+          "gallery": [
+              "/images/Lesous-web.png",
+              "/images/lesous-grimorio.png",
+              "/images/lesous-login.png",
+              "/images/lesous-dashboard.png"
+          ],
+          "technologies": ["Next.js 16", "PostgreSQL", "Prisma ORM 7", "React.js", "Framer Motion", "Tailwind CSS", "Supabase", "Vercel"],
+          "features": ["Administration Panel (CMS)", "Animations with Framer Motion", "Security with RLS and Supabase Auth", "CI/CD deployment in Vercel", "Cloud Media Management"]
+        },
         {
           "title": "WMS - International Logistics Management",
           "description": "Custom-developed Warehouse Management System. Focused on high-performance bulk data entry and stock control.",
-          "fullDescription": "I developed a scalable WMS using the latest .NET 9. from design to configuration and deployment in production on IIS, ensuring high availability and environment management. The main challenge was handling the ingestion of massive Excel files with inconsistent data. I created automatic cleaning and type validation algorithms. In addition, I implemented granular access control (RBAC) with ASP.NET Identity and optimized performance using server-side pagination for smooth management of large volumes of data. I implemented a static analysis environment with SonarQube on Docker, auditing and correcting critical vulnerabilities and Code Smells, raising the security and maintainability standard of the project for its move to production, achieving the highest quality rating ('A') in Reliability, Security and Maintainability, reducing cognitive complexity and eliminating technical debt.",
+          "fullDescriptions": [
+            "I developed a scalable WMS using the latest .NET 9. from design to configuration and deployment in production on IIS, ensuring high availability and environment management.",
+            "The main challenge was handling the intake of massive Excel files with inconsistent data. I created automatic cleaning and type validation algorithms. In addition, I implemented granular access control (RBAC) with ASP.NET Identity and optimized performance using server-side pagination for smooth management of large volumes of data.",
+            "I implemented a static analysis environment with SonarQube on Docker, auditing and correcting critical vulnerabilities and code smells, raising the security and maintainability standards of the project for its transition to production, achieving the highest quality rating (A) in reliability, security, and maintainability, reducing cognitive complexity, and eliminating technical debt.",
+            "The result was a robust and efficient system that significantly improved the customer's inventory management and logistics operations, with an intuitive interface and a backend optimized for performance."
+          ],
           "image": "/images/Ceva-logo.png",
           "gallery": [
               "/images/ceva-dash.png",
@@ -129,7 +168,12 @@
         {
           "title": "P2P Rental Platform",
           "description": "Digital marketplace for vehicle rental between individuals. Includes real-time chat and secure payments.",
-          "fullDescription": "A complete end-to-end platform. The focus was on security (HttpOnly cookies, CSRF protection) and real-time user experience. I implemented a chat with Socket.IO for owners and tenants to negotiate, and an integration with Mercado Pago to block funds as collateral. In addition, I designed shift validation logic using unique security codes to ensure the physical delivery of assets.",
+          "fullDescriptions": [
+            "A complete end-to-end platform. The focus was on security (HttpOnly cookies, CSRF protection) and real-time user experience.",
+            "I implemented a chat with Socket.IO for owners and tenants to negotiate, and an integration with Mercado Pago to block funds as a guarantee.",
+            "I designed shift validation logic using unique security codes to ensure the physical delivery of assets.",
+            "The development was carried out with a RESTful architecture using Node.js and Express on the backend, with React.js on the frontend and PostgreSQL as the database, ensuring a smooth and secure experience for users."
+          ],
           "image": "/images/Rydox-logo.png",
           "gallery": [
               "/images/wms-main.png",
@@ -142,16 +186,29 @@
         {
           "title": "Dynamics 365 Finance and Operations",
           "description": "Customizations in Dynamics 365 Finance and Operations for financial and project management modules.",
-          "fullDescription": "As part of Axxon Consulting, I participated in the development of customizations in Dynamics 365 Finance and Operations using X++. I implemented custom entities, forms, tables, and fields for billing and project management processes. Creation and optimization of queries in SQL Server for internal reports. I collaborated with multidisciplinary teams to improve operational flows for clients in different sectors.",
+          "fullDescriptions": [
+            "As part of Axxon Consulting, I participated in the development of customizations in Dynamics 365 Finance and Operations using X++.",
+            "I implemented entities, forms, tables, and custom fields for billing and project management processes. Creation and optimization of queries in SQL Server for internal reports.",
+            "I collaborated with multidisciplinary teams to improve operational flows for clients in different sectors."
+          ],
           "image": "/images/axxon.png",
           "technologies": ["X++", "SQL Server", "Dynamics 365", "Git"]
         },
         {
           "title": "Trombofilia Argentina",
           "description": "Informational and contact website for a health NGO. Optimized for SEO and accessibility.",
-          "fullDescription": "Direct work with the client. I developed an ultra-lightweight static website optimized for SEO and accessibility. I integrated Formsubmit with reCAPTCHA v2 to securely handle emails without a backend, preventing spam and protecting sensitive data.",
+          "fullDescriptions": [
+            "Direct work with the client. I developed an ultra-light static site optimized for SEO and accessibility.",
+            "I integrated Formsubmit with reCAPTCHA v2 to securely handle emails without a backend, preventing spam and protecting sensitive data.",
+            "The result was a professional and functional website that meets the client's objectives, with a responsive design and an optimized user experience."
+          ],
           "image": "/images/ong.png",
           "link": "https://trombofiliaytrombosisargentina.netlify.app/",
+          "gallery": [
+              "/images/ong-main.png",
+              "/images/ong-form.png",
+              "/images/ong-seo.png"
+          ],
           "technologies": ["HTML5", "Bootstrap", "JavaScript", "SEO"],
           "features": ["Responsive Design", "Anti-Spam Protection", "SEO Optimization", "Secure Forms"]
         }
